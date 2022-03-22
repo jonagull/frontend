@@ -1,4 +1,86 @@
 body {
   margin: 0;
   padding: 0;
+  font-family: Poppins, sans-serif;
+}
+
+.navbar__wrapper {
+  width: 100vw;
+  height: 50px;
+  z-index: 1;
+}
+
+.landing-page__wrapper {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+
+  .black-side__wrapper {
+    width: 50%;
+    height: 100%;
+    background: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .title {
+      display: flex;
+      justify-content: flex-start;
+      margin-bottom: 100px;
+    }
+
+    .black-content__container {
+      width: 431px;
+      height: 193px;
+      transform: translateY(-70px);
+
+      h1 {
+        font-size: 60px;
+        line-height: 0.85;
+      }
+      button {
+        width: 185px;
+        height: 76px;
+        border-radius: 19px;
+        border: none;
+        font-size: 24px;
+        background-color: white;
+        font-weight: 700;
+        font-family: poppins;
+      }
+    }
+  }
+
+  .white-side__wrapper {
+    width: 50%;
+    height: 100%;
+    background-color: white;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .white-content__container {
+      height: 338px;
+      width: 277px;
+
+      h1 {
+        font-size: 60px;
+        line-height: 0.85;
+      }
+      button {
+        width: 185px;
+        height: 76px;
+        border-radius: 19px;
+        border: none;
+        font-size: 24px;
+        background-color: black;
+        color: white;
+        font-weight: 700;
+        font-family: poppins;
+      }
+    }
+  }
 }
