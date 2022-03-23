@@ -8,7 +8,7 @@ export const LandingPage = () => {
             <div className="black-side__wrapper">
                 <div className="black-content__container">
                     <h1>Filmaker
-                        Screenwriter
+                        Screenwri
                         Soundguy
                     </h1>
                     <button>Portfolio</button>
