@@ -5,7 +5,7 @@ export const Navbar = () => {
     return (
         <div className="navbar__wrapper">
             <div className="title__container">
-                <h1>DUK</h1>
+                <h1>DUK-thing</h1>
             </div>
             <div className="menu__container">
                 Box
