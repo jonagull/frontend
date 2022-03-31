@@ -7,7 +7,28 @@ body {
 .navbar__wrapper {
   width: 100vw;
   height: 50px;
-  z-index: 1;
+  display: flex;
+  position: absolute;
+  justify-content: space-between;
+  align-items: center;
+
+  .title__container {
+    z-index: 1;
+    color: rgb(255, 255, 255);
+    margin: 30px;
+    margin-top: 60px;
+
+    h1 {
+      font-size: 40px;
+    }
+  }
+
+  .menu__container {
+    z-index: 1;
+    margin: 20px 20px 0 0;
+    color: black;
+    font-size: 40px;
+  }
 }
 
 .landing-page__wrapper {
@@ -82,6 +103,85 @@ body {
         font-weight: 700;
         font-family: poppins;
       }
+    }
+  }
+}
+
+.project-component__wrapper {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    width: 400px;
+    height: auto;
+    border-radius: 20px;
+    margin: 10px;
+  }
+
+  .project-left-component__wrapper {
+    width: 900px;
+    height: 500px;
+    background-color: grey;
+    margin: 10px;
+    padding: 30px;
+    display: flex;
+    flex-direction: row-reverse;
+    border-radius: 20px;
+
+    h1 {
+      font-family: Poppins;
+      font-size: 50px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 50px;
+      letter-spacing: -0.045em;
+    }
+
+    p {
+      font-family: "Poppins";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 100.69%;
+      letter-spacing: -0.045em;
+      width: 432px;
+      height: 214px;
+    }
+  }
+
+  .project-right-component__wrapper {
+    width: 900px;
+    height: 100%;
+    margin: 10px;
+    padding: 30px;
+    display: flex;
+
+    .content__container {
+      margin: 10px;
+    }
+
+    h1 {
+      font-family: Poppins;
+      font-size: 50px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 50px;
+      letter-spacing: -0.045em;
+      margin: 0;
+    }
+
+    p {
+      font-family: "Poppins";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 100.69%;
+      letter-spacing: -0.045em;
+      width: 432px;
+      height: 214px;
     }
   }
 }
