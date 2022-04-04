@@ -1,8 +1,11 @@
 import React from 'react'
-
+import { useNavigate } from 'react-router-dom'
 
 export const LandingPage = () => {
 
+    let navigate = useNavigate();
+
+    
     return(
         <div className="landing-page__wrapper">
             <div className="black-side__wrapper">
@@ -11,7 +14,9 @@ export const LandingPage = () => {
                         Screenwriter
                         Soundguy
                     </h1>
-                    <button>Portfolio</button>
+                    <button onClick={() => {
+                        navigate("/portfolio")
+                    }}>Portfolio</button>
                 </div>
             </div>
             <div className="white-side__wrapper">
@@ -20,7 +25,9 @@ export const LandingPage = () => {
                         rent
                         out stuff.
                     </h1>
-                    <button>Shop</button>
+                    <button onClick={() => {
+                        navigate("/shop")
+                    }}>Shop</button>
                 </div>
             </div>
         </div>
