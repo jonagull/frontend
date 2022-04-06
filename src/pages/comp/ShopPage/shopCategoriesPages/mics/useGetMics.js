@@ -1,8 +1,12 @@
 import { useEffect } from "react";
 
-const useGetMics = () => {
+export const useGetMics = (setMicData) => {
   const fetchMics = () => {
-    fetch();
+    fetch("http://localhost:1337/api/microphones/?populate=*")
+      .then((res) => res.json())
+      .then((res) => {
+        setMicData(res);
+      });
   };
   useEffect(() => {
     fetchMics();
