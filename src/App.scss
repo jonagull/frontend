@@ -125,7 +125,8 @@ body {
 
   img {
     width: 400px;
-    height: auto;
+    height: 400px;
+    object-fit: cover;
     border-radius: 20px;
     margin: 10px;
   }
@@ -171,6 +172,9 @@ body {
 
   }
 
+
+
+
   .description__wrapper {
     width: 80%;
 
@@ -192,6 +196,7 @@ body {
       line-height: 115.69%;
       letter-spacing: -0.045em;
       color: #000000;
+      margin-bottom: 50px;
     }
 
     h6 {
