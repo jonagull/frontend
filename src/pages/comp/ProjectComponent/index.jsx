@@ -24,7 +24,7 @@ export const ProjectComponent = () => {
         <div className="top-section__wrapper">
           <div className="text-button__container">
             <h1>
-              LESS
+            Yeah  
               <br />
               IS
               <br /> MORE

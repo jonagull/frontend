@@ -41,6 +41,13 @@ export const ShopPage = () => {
     <div className="shop__wrapper">
       <div className="title__container">
         <h1>SHOP</h1>
+        <hr
+          style={{
+            backgroundColor: "white",
+            width: "80%",
+            marginLeft: "10%",
+          }}
+        ></hr>
       </div>
 
       <div className="categories__wrapper">
