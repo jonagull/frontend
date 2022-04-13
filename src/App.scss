@@ -46,6 +46,13 @@ body {
     cursor: pointer;
   }
 
+  button:hover {
+    scale: 1.1;
+    transition: 200ms ease-in-out;
+  }
+
+
+
   .black-side__wrapper {
     width: 50%;
     height: 100%;
@@ -294,6 +301,7 @@ body {
 
   .title__container {
     margin-bottom: 40px;
+    
     h1 {
       font-family: 'Poppins';
       font-style: normal;
@@ -409,3 +417,78 @@ body {
   color: white;
 }
 
+.duk-page__wrapper {
+  display: flex;
+  justify-content: space-evenly;
+  height: 100vh;
+  
+  .duk-content__wrapper {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    justify-content: center;
+
+  .desc__container {
+
+  }
+
+}
+.image__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+
+  img {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 40px;
+  }
+}
+}
+
+
+.duk-projects__wrapper {
+  color: white;
+  display: flex;
+  justify-content: center;
+}
+
+
+.duk-projects__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  
+
+  .duk-project__container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 40px;
+
+
+    .duk-content__container {
+      width: 30%;
+    }
+    
+
+    .duk-image__container {
+      width: 300px;
+      height: 300px;
+      object-fit: cover;
+      
+      img {
+        width: 300px;
+        height: 300px;
+        object-fit: cover;
+        border-radius: 10px;
+      }
+    }
+
+  }
+
+
+}
