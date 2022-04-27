@@ -8,6 +8,10 @@ import { MicsPage } from "./shopCategoriesPages/mics";
 import { Button, styled } from "@material-ui/core";
 import IconButton from "@mui/material/IconButton";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import { DukPage } from "./DukPage";
+import { MixersPage } from "./shopCategoriesPages/mixers";
+import { MiscPage } from "./shopCategoriesPages/misc";
+import { DukProjects } from "./DukPage/DukProjects";
 
 const ExpandMore = styled((props) => {
   const { expand, ...other } = props;
@@ -39,8 +43,10 @@ export const ShopPage = () => {
 
   return (
     <div className="shop__wrapper">
+      <DukPage />
+      <DukProjects />
       <div className="title__container">
-        <h1>SHOP</h1>
+        <h1>UTLEIE</h1>
         <hr
           style={{
             backgroundColor: "white",
@@ -53,7 +59,7 @@ export const ShopPage = () => {
       <div className="categories__wrapper">
         <div className="category__container">
           <div className="title-button__container">
-            <h1>MICS</h1>
+            <h1>Mikrofoner</h1>
             <ExpandMore
               expand={micExpanded}
               onClick={handleMicExpand}
@@ -78,7 +84,7 @@ export const ShopPage = () => {
 
         <div className="category__container">
           <div className="title-button__container">
-            <h1>MIXERS</h1>
+            <h1>Mixere</h1>
             <ExpandMore
               expand={micExpanded}
               onClick={handleMixerExpand}
@@ -98,12 +104,12 @@ export const ShopPage = () => {
           </div>
         </div>
         <Collapse in={mixerExpanded} timeout="auto" easing>
-          <MicsPage />
+          <MixersPage />
         </Collapse>
 
         <div className="category__container">
           <div className="title-button__container">
-            <h1>MISC</h1>
+            <h1>Extra</h1>
             <ExpandMore
               expand={micExpanded}
               onClick={handleMiscExpand}
@@ -123,7 +129,7 @@ export const ShopPage = () => {
           </div>
         </div>
         <Collapse in={miscExpanded} timeout="auto" easing>
-          <MicsPage />
+          <MiscPage />
         </Collapse>
       </div>
     </div>

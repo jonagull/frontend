@@ -3,6 +3,7 @@ import { Navbar } from "../../Navbar";
 import { useGetProjects } from "./useGetProjecs";
 import { ReactComponent as HomeIcon } from "../../../assets/home.svg";
 import { flexbox } from "@mui/system";
+import { Rotate as Hamburger } from "hamburger-react";
 
 export const ProjectComponent = () => {
   const [projectData, setProjectData] = useState();
@@ -11,25 +12,25 @@ export const ProjectComponent = () => {
 
   return (
     <React.Fragment>
-      <div style={{ display: "flex", justifyContent: "flex-start" }}>
-        <HomeIcon
+      <div className="hamburger__container">
+        <Hamburger size={50} />
+        {/* <HomeIcon
           style={{
             height: "40px",
             marginLeft: "-150px",
             marginTop: "40px",
-          }}
-        />
+          }} */}
+        {/* /> */}
       </div>
       <div className="project-component__wrapper">
         <div className="top-section__wrapper">
           <div className="text-button__container">
             <h1>
-            Yeah  
+              Less
               <br />
               IS
               <br /> MORE
             </h1>
-            <button>Press</button>
           </div>
           <div className="image__container">
             <img src="https://hatch.macleay.net/wp-content/uploads/2019/04/Stanley_Kubrick_-_WB_promo.jpg"></img>
@@ -43,7 +44,7 @@ export const ProjectComponent = () => {
           }}
         ></hr>
         <div className="description__wrapper">
-          <h1 style={{ fontWeight: 600, marginBottom: "15px" }}> About:</h1>
+          <h1 style={{ fontWeight: 600, marginBottom: "15px" }}> Om:</h1>
           <p style={{ fontSize: "40px", marginBottom: "15px" }}>
             Hashtag fanny paleo chicharrones twee! Marfa distillery offal swag
             venmo them kickstarter. Biodiesel tacos plaid deep raclette meggings
@@ -59,7 +60,7 @@ export const ProjectComponent = () => {
               fontWeight: 600,
             }}
           >
-            - Jan Banan
+            - Daniel Johannessen
           </h1>
         </div>
         <hr
@@ -84,7 +85,7 @@ export const ProjectComponent = () => {
           }}
         ></hr>
         <div>
-          <h1>Projects:</h1>
+          <h1 style={{ marginBottom: "30px" }}>Prosjekter:</h1>
           {projectData &&
             projectData.data.map((x, key) => (
               <div
@@ -97,7 +98,7 @@ export const ProjectComponent = () => {
               >
                 <div className="content__container">
                   <h1>{x.attributes.ProjectTitle}</h1>
-                  <p>{x.attributes.ProjectDesciption}</p>
+                  <p>{x.attributes.ProjectDescription}</p>
                 </div>
                 <div className="image__container">
                   <img

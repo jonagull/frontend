@@ -1,13 +1,15 @@
 import { useEffect } from "react";
 
-export const useGetMics = (setMicData) => {
+export const useGetDukContent = (setDukContent) => {
   const fetchData = () => {
-    fetch("http://localhost:1337/api/microphones/?populate=*")
+    fetch("http://localhost:1337/api/duk-contents/?populate=*")
       .then((res) => res.json())
       .then((data) => {
-        setMicData(data);
+        console.log(data);
+        setDukContent(data);
       });
   };
+
   useEffect(() => {
     fetchData();
   }, []);

@@ -46,7 +46,7 @@ body {
     cursor: pointer;
   }
 
-  button:hover {
+    button:hover {
     scale: 1.1;
     transition: 200ms ease-in-out;
   }
@@ -160,7 +160,6 @@ body {
         font-size: 160px;
         line-height: 96.5%;
         text-align: center;
-        margin: 0;
        }
 
        button {
@@ -221,15 +220,14 @@ body {
   .project-left-component__wrapper {
     height: 350px;
     margin: 10px;
+    margin-bottom: 40px;
     padding: 30px;
     display: flex;
     flex-direction: row-reverse;
     border-radius: 20px;
     justify-content: space-evenly;
     align-items: center;
-    border: 3px solid black;
     box-shadow: 4px 8px 36px -13px rgba(0,0,0,0.75);
-    background-color: #e3dac9;
 
 
     h1 {
@@ -256,11 +254,11 @@ body {
   .project-right-component__wrapper {
     height: 350px;
     margin: 10px;
+    margin-bottom: 40px;
     padding: 30px;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    border: 3px solid;
     border-radius: 30px;
     box-shadow: 4px 8px 36px -13px rgba(0,0,0,0.75);
 
@@ -450,6 +448,13 @@ body {
 }
 
 
+.hamburger__container {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 30px;
+  margin-right: 20px;
+}
+
 .duk-projects__wrapper {
   color: white;
   display: flex;
@@ -461,7 +466,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  
+
 
   .duk-project__container {
     display: flex;

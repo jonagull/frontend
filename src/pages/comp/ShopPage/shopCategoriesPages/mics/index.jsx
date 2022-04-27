@@ -3,10 +3,9 @@ import React, { useState } from "react";
 import { useGetMics } from "./useGetMics";
 
 export const MicsPage = () => {
-  const [micData, setMicData] = useState();
+  const [micData, setMicData] = useState("");
 
   useGetMics(setMicData);
-  console.log(micData);
 
   return (
     <div className="mics__wrapper">
@@ -20,7 +19,6 @@ export const MicsPage = () => {
                 style={{ color: "white" }}
               >
                 <h2>{x.attributes.title}</h2>
-                {console.log(x.attributes.title)}
                 <p>{x.attributes.description}</p>
                 <Button
                   variant="contained"
