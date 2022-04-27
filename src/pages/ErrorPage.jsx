@@ -1,12 +1,13 @@
-import { Navbar } from "./Navbar"
-
-
+import { useNavigate } from "react-router-dom";
+import { Navbar } from "./Navbar";
 
 export const ErrorPage = () => {
-    return(
-        <div>
-        <Navbar />
-            <h1>Error page go back!</h1>
-        </div>
-    )
-}
+  let navigate = useNavigate();
+
+  return (
+    <div>
+      <h1>Error page go back!</h1>
+      <button onClick={() => navigate("/")}>Home</button>
+    </div>
+  );
+};
