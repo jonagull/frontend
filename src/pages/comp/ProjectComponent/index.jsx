@@ -1,68 +1,50 @@
 import React, { useState } from "react";
-import { Navbar } from "../../Navbar";
 import { useGetProjects } from "./useGetProjecs";
-import { ReactComponent as HomeIcon } from "../../../assets/home.svg";
-import { flexbox } from "@mui/system";
 import { Rotate as Hamburger } from "hamburger-react";
+import { useGetPortfolioContent } from "./useGetPortfolioContent";
+import { apiUrl } from "../../../apiShit";
+import { Sidebar } from "../Sidebar";
 
 export const ProjectComponent = () => {
   const [projectData, setProjectData] = useState();
+  const [portfolioContentData, setPortfolioContentData] = useState();
 
   useGetProjects(setProjectData);
+  useGetPortfolioContent(setPortfolioContentData);
 
   return (
     <React.Fragment>
-      <div className="hamburger__container">
-        <Hamburger size={50} />
-        {/* <HomeIcon
-          style={{
-            height: "40px",
-            marginLeft: "-150px",
-            marginTop: "40px",
-          }} */}
-        {/* /> */}
-      </div>
+      {/* <div className="hamburger__container">
+        <Hamburger size={50} mr={10} />
+      </div> */}
+
       <div className="project-component__wrapper">
-        <div className="top-section__wrapper">
-          <div className="text-button__container">
-            <h1>
-              Less
-              <br />
-              IS
-              <br /> MORE
-            </h1>
+        <div className="duk-page__wrapper">
+          <div className="duk-content__wrapper">
+            <div className="header__container" style={{ color: "black" }}>
+              <h1>
+                {portfolioContentData &&
+                  portfolioContentData.data.attributes.title}
+              </h1>
+            </div>
+            <div className="desc__container" style={{ color: "black" }}>
+              <p>
+                {portfolioContentData &&
+                  portfolioContentData.data.attributes.description}
+              </p>
+            </div>
+            <div className="arrow-10"></div>
           </div>
           <div className="image__container">
-            <img src="https://hatch.macleay.net/wp-content/uploads/2019/04/Stanley_Kubrick_-_WB_promo.jpg"></img>
+            <img
+              src={`${apiUrl}${
+                portfolioContentData &&
+                portfolioContentData.data.attributes.image.data.attributes.url
+              }`}
+            ></img>
           </div>
         </div>
-        <div className="header-text__container"></div>
-        <hr
-          style={{
-            width: "80%",
-            marginBottom: "40px",
-          }}
-        ></hr>
-        <div className="description__wrapper">
-          <h1 style={{ fontWeight: 600, marginBottom: "15px" }}> Om:</h1>
-          <p style={{ fontSize: "40px", marginBottom: "15px" }}>
-            Hashtag fanny paleo chicharrones twee! Marfa distillery offal swag
-            venmo them kickstarter. Biodiesel tacos plaid deep raclette meggings
-            shoreditch banjo letterpress bread you haven't mustache ennui
-            mustache tile yolo drinking party kitsch charcoal mumblecore
-            snackwave messenger artisan chic carry coffee trade jianbing
-            brooklyn echo axe
-          </p>
-          <h1
-            style={{
-              display: "flex",
-              justifyContent: "flex-end",
-              fontWeight: 600,
-            }}
-          >
-            - Daniel Johannessen
-          </h1>
-        </div>
+
         <hr
           style={{
             width: "80%",
@@ -104,7 +86,7 @@ export const ProjectComponent = () => {
                   <img
                     style={{ width: "400px", height: "auto" }}
                     src={
-                      "http://localhost:1337" +
+                      apiUrl +
                       x.attributes.project_thumbnail.data.attributes.formats
                         .thumbnail.url
                     }

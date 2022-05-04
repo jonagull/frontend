@@ -1,11 +1,13 @@
 import { useEffect } from "react";
 import { apiUrl } from "../../../apiShit";
 
-export const useGetProjects = (setProjectData) => {
+export const useGetPortfolioContent = (setPortfolioContentData) => {
   let fetchData = async () => {
-    let response = await fetch(`${apiUrl}/api/portfolioprojects?populate=*`);
+    let response = await fetch(
+      `${apiUrl}/api/portfolio-side-contents/1?populate=*`
+    );
     let data = await response.json();
-    setProjectData(data);
+    setPortfolioContentData(data);
   };
   useEffect(() => {
     fetchData();
