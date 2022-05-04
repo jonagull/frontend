@@ -1,5 +1,6 @@
 import { Button } from "@material-ui/core";
 import React, { useState } from "react";
+import { apiUrl } from "../../../../../apiShit";
 import { useGetMics } from "./useGetMics";
 
 export const MicsPage = () => {
@@ -18,11 +19,11 @@ export const MicsPage = () => {
                 className="mic-content__container"
                 style={{ color: "white" }}
               >
-                <h2>{x.attributes.title}</h2>
-                <p>{x.attributes.description}</p>
+                <h2>{x.attributes.title && x.attributes.title}</h2>
+                <p>{x.attributes.description && x.attributes.description}</p>
                 <Button
                   variant="contained"
-                  href={x.attributes.hygglo_link}
+                  href={x.attributes.hygglo_link && x.attributes.hygglo_link}
                   target="_blank"
                   style={{
                     width: "70px",
@@ -36,7 +37,11 @@ export const MicsPage = () => {
               </div>
               <div className="mic-image__container">
                 <img
-                  src={`http://localhost:1337${x.attributes.thumbnail.data.attributes.url}`}
+                  src={
+                    x.attributes.thumbnail.data
+                      ? `${apiUrl}${x.attributes.thumbnail.data.attributes.url}`
+                      : null
+                  }
                 ></img>
               </div>
             </div>
