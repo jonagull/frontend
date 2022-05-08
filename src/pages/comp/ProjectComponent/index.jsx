@@ -21,7 +21,7 @@ export const ProjectComponent = () => {
       <div className="project-component__wrapper">
         <div className="duk-page__wrapper">
           <div className="duk-content__wrapper">
-            <div className="header__container" style={{ color: "black" }}>
+            <div className="header__container" style={{ color: "pink" }}>
               <h1>
                 {portfolioContentData &&
                   portfolioContentData.data.attributes.title}
