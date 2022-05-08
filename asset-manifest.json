@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/frontend/static/css/main.ca638656.css",
+    "main.js": "/frontend/static/js/main.4fd7cb0b.js",
+    "static/js/787.cda612ba.chunk.js": "/frontend/static/js/787.cda612ba.chunk.js",
+    "static/media/roland_v_600uhd_4k_hdr_multi_format_video_1457842.jpg": "/frontend/static/media/roland_v_600uhd_4k_hdr_multi_format_video_1457842.e3a93952506b81c442ed.jpg",
+    "static/media/shotgun-mic.jpg": "/frontend/static/media/shotgun-mic.156dc54eaa1e49e00e02.jpg",
+    "index.html": "/frontend/index.html",
+    "main.ca638656.css.map": "/frontend/static/css/main.ca638656.css.map",
+    "main.4fd7cb0b.js.map": "/frontend/static/js/main.4fd7cb0b.js.map",
+    "787.cda612ba.chunk.js.map": "/frontend/static/js/787.cda612ba.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ca638656.css",
+    "static/js/main.4fd7cb0b.js"
+  ]
+}
