@@ -1,1 +1,3 @@
-export const apiUrl = "http://localhost:1337";
+export const apiUrl = "https://jellyfish-app-sd8qo.ondigitalocean.app";
+
+// https://jellyfish-app-sd8qo.ondigitalocean.app/api/duk-projects?populate=*`

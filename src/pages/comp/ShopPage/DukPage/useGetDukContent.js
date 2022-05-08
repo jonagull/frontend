@@ -6,7 +6,6 @@ export const useGetDukContent = (setDukContent) => {
     fetch(`${apiUrl}/api/duk-contents/?populate=*`)
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
         setDukContent(data);
       });
   };

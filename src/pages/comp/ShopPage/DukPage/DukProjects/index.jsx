@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { apiUrl } from "../../../../../apiShit";
 import { useGetDukProjects } from "./useGetDukProjects";
 
 export const DukProjects = () => {
@@ -30,7 +31,7 @@ export const DukProjects = () => {
                 </div>
                 <div className="duk-image__container">
                   <img
-                    src={`http://localhost:1337${x.attributes.thumbnail.data.attributes.url}`}
+                    src={`${apiUrl}${x.attributes.thumbnail.data.attributes.url}`}
                   ></img>
                 </div>
               </div>

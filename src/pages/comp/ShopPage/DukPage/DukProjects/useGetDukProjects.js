@@ -6,7 +6,6 @@ export const useGetDukProjects = (setDukProjects) => {
     fetch(`${apiUrl}/api/duk-projects?populate=*`)
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
         setDukProjects(data);
       });
   };
