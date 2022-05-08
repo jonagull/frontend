@@ -1,13 +1,11 @@
 import React, { useState } from "react";
+import { apiUrl } from "../../../../apiShit";
 import { useGetDukContent } from "./useGetDukContent";
 
 export const DukPage = () => {
   const [dukContent, setDukContent] = useState("");
 
   useGetDukContent(setDukContent);
-
-  console.log("yooO", dukContent);
-  //   console.log(dukContent.data[0].attributes.description);
 
   return (
     <React.Fragment>
@@ -32,7 +30,7 @@ export const DukPage = () => {
         </div>
         <div className="image__container">
           <img
-            src={`http://localhost:1337${
+            src={`${apiUrl}${
               dukContent &&
               dukContent.data[0].attributes.profilepic.data.attributes.url
             }`}
