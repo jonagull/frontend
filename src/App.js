@@ -11,7 +11,7 @@ import { MixersPage } from "./pages/comp/ShopPage/shopCategoriesPages/mixers";
 
 function App() {
   return (
-    <Router>
+    <Router basename="/frontend">
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path="portfolio" element={<ProjectComponent />} />
