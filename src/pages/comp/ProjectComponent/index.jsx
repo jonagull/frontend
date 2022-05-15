@@ -4,13 +4,16 @@ import { Rotate as Hamburger } from "hamburger-react";
 import { useGetPortfolioContent } from "./useGetPortfolioContent";
 import { apiUrl } from "../../../apiShit";
 import { Sidebar } from "../Sidebar";
+import { useGetYoutubeUrl } from "./useGetYoutubeUrl";
 
 export const ProjectComponent = () => {
   const [projectData, setProjectData] = useState();
   const [portfolioContentData, setPortfolioContentData] = useState();
+  const [youtubeUrl, setYoutubeUrl] = useState();
 
   useGetProjects(setProjectData);
   useGetPortfolioContent(setPortfolioContentData);
+  useGetYoutubeUrl(setYoutubeUrl);
 
   return (
     <React.Fragment>
@@ -56,7 +59,7 @@ export const ProjectComponent = () => {
             style={{ borderRadius: "20px" }}
             width="900"
             height="500"
-            src="https://www.youtube.com/embed/tgbNymZ7vqY"
+            src={youtubeUrl && youtubeUrl.data[0].attributes.youtube_link}
           ></iframe>
         </div>
         <hr
