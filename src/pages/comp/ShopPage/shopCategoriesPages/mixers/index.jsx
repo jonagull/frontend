@@ -8,8 +8,6 @@ export const MixersPage = () => {
 
   useGetMixers(setMixerData);
 
-  console.log("here", mixerData);
-
   return (
     <div className="mics__wrapper">
       <div className="mic-products__wrapper">

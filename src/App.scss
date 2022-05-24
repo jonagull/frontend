@@ -18,15 +18,16 @@ body {
   position: absolute;
   justify-content: space-between;
   align-items: center;
-
+  
   .title__container {
     z-index: 1;
     color: rgb(255, 255, 255);
     margin: 30px;
     margin-top: 60px;
-
+    
     h1 {
       font-size: 40px;
+      cursor: pointer;
     }
   }
 
@@ -36,7 +37,12 @@ body {
     color: black;
     font-size: 40px;
   }
+  h1:hover {
+    scale: 1.1;
+    transition: 200ms ease-in-out;
+  }
 }
+
 
 .landing-page__wrapper {
   z-index: -1;

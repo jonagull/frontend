@@ -12,6 +12,7 @@ import { DukPage } from "./DukPage";
 import { MixersPage } from "./shopCategoriesPages/mixers";
 import { MiscPage } from "./shopCategoriesPages/misc";
 import { DukProjects } from "./DukPage/DukProjects";
+import { Navbar } from "../../Navbar";
 
 const ExpandMore = styled((props) => {
   const { expand, ...other } = props;
@@ -42,96 +43,99 @@ export const ShopPage = () => {
   };
 
   return (
-    <div className="shop__wrapper">
-      <DukPage />
-      <DukProjects />
-      <div className="title__container">
-        <h1>UTLEIE</h1>
-        <hr
-          style={{
-            backgroundColor: "white",
-            width: "80%",
-            marginLeft: "10%",
-          }}
-        ></hr>
+    <React.Fragment>
+      <Navbar />
+      <div className="shop__wrapper">
+        <DukPage />
+        <DukProjects />
+        <div className="title__container">
+          <h1>UTLEIE</h1>
+          <hr
+            style={{
+              backgroundColor: "white",
+              width: "80%",
+              marginLeft: "10%",
+            }}
+          ></hr>
+        </div>
+
+        <div className="categories__wrapper">
+          <div className="category__container">
+            <div className="title-button__container">
+              <h1>Mikrofoner</h1>
+              <ExpandMore
+                expand={micExpanded}
+                onClick={handleMicExpand}
+                aria-expanded={micExpanded}
+                aria-label="show more"
+                style={{
+                  backgroundColor: "white",
+                  borderRadius: "50px",
+                  width: "70px",
+                }}
+              >
+                <ExpandMoreIcon style={{ color: "black" }} />
+              </ExpandMore>
+            </div>
+            <div>
+              <img src={micpic}></img>
+            </div>
+          </div>
+          <Collapse in={micExpanded} timeout="auto" easing>
+            <MicsPage />
+          </Collapse>
+
+          <div className="category__container">
+            <div className="title-button__container">
+              <h1>Mixere</h1>
+              <ExpandMore
+                expand={micExpanded}
+                onClick={handleMixerExpand}
+                aria-expanded={micExpanded}
+                aria-label="show more"
+                style={{
+                  backgroundColor: "white",
+                  borderRadius: "50px",
+                  width: "70px",
+                }}
+              >
+                <ExpandMoreIcon style={{ color: "black" }} />
+              </ExpandMore>
+            </div>
+            <div>
+              <img src={mixerpic}></img>
+            </div>
+          </div>
+          <Collapse in={mixerExpanded} timeout="auto" easing>
+            <MixersPage />
+          </Collapse>
+
+          <div className="category__container">
+            <div className="title-button__container">
+              <h1>Extra</h1>
+              <ExpandMore
+                expand={micExpanded}
+                onClick={handleMiscExpand}
+                aria-expanded={micExpanded}
+                aria-label="show more"
+                style={{
+                  backgroundColor: "white",
+                  borderRadius: "50px",
+                  width: "70px",
+                }}
+              >
+                <ExpandMoreIcon style={{ color: "black" }} />
+              </ExpandMore>
+            </div>
+            <div>
+              <img src={miscpic}></img>
+            </div>
+          </div>
+          <Collapse in={miscExpanded} timeout="auto" easing>
+            <MiscPage />
+          </Collapse>
+        </div>
       </div>
-
-      <div className="categories__wrapper">
-        <div className="category__container">
-          <div className="title-button__container">
-            <h1>Mikrofoner</h1>
-            <ExpandMore
-              expand={micExpanded}
-              onClick={handleMicExpand}
-              aria-expanded={micExpanded}
-              aria-label="show more"
-              style={{
-                backgroundColor: "white",
-                borderRadius: "50px",
-                width: "70px",
-              }}
-            >
-              <ExpandMoreIcon style={{ color: "black" }} />
-            </ExpandMore>
-          </div>
-          <div>
-            <img src={micpic}></img>
-          </div>
-        </div>
-        <Collapse in={micExpanded} timeout="auto" easing>
-          <MicsPage />
-        </Collapse>
-
-        <div className="category__container">
-          <div className="title-button__container">
-            <h1>Mixere</h1>
-            <ExpandMore
-              expand={micExpanded}
-              onClick={handleMixerExpand}
-              aria-expanded={micExpanded}
-              aria-label="show more"
-              style={{
-                backgroundColor: "white",
-                borderRadius: "50px",
-                width: "70px",
-              }}
-            >
-              <ExpandMoreIcon style={{ color: "black" }} />
-            </ExpandMore>
-          </div>
-          <div>
-            <img src={mixerpic}></img>
-          </div>
-        </div>
-        <Collapse in={mixerExpanded} timeout="auto" easing>
-          <MixersPage />
-        </Collapse>
-
-        <div className="category__container">
-          <div className="title-button__container">
-            <h1>Extra</h1>
-            <ExpandMore
-              expand={micExpanded}
-              onClick={handleMiscExpand}
-              aria-expanded={micExpanded}
-              aria-label="show more"
-              style={{
-                backgroundColor: "white",
-                borderRadius: "50px",
-                width: "70px",
-              }}
-            >
-              <ExpandMoreIcon style={{ color: "black" }} />
-            </ExpandMore>
-          </div>
-          <div>
-            <img src={miscpic}></img>
-          </div>
-        </div>
-        <Collapse in={miscExpanded} timeout="auto" easing>
-          <MiscPage />
-        </Collapse>
-      </div>
-    </div>
+    </React.Fragment>
   );
 };

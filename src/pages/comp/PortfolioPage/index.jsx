@@ -1,12 +1,11 @@
 import React, { useState } from "react";
 import { useGetProjects } from "./useGetProjecs";
-import { Rotate as Hamburger } from "hamburger-react";
 import { useGetPortfolioContent } from "./useGetPortfolioContent";
 import { apiUrl } from "../../../apiShit";
-import { Sidebar } from "../Sidebar";
 import { useGetYoutubeUrl } from "./useGetYoutubeUrl";
+import { Navbar } from "../../Navbar";
 
-export const ProjectComponent = () => {
+export const PortfolioPage = () => {
   const [projectData, setProjectData] = useState();
   const [portfolioContentData, setPortfolioContentData] = useState();
   const [youtubeUrl, setYoutubeUrl] = useState();
@@ -17,10 +16,7 @@ export const ProjectComponent = () => {
 
   return (
     <React.Fragment>
-      {/* <div className="hamburger__container">
-        <Hamburger size={50} mr={10} />
-      </div> */}
-
+      <Navbar color={{ color: "black" }} />
       <div className="project-component__wrapper">
         <div className="duk-page__wrapper">
           <div className="duk-content__wrapper">
