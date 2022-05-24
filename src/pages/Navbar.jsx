@@ -1,20 +1,23 @@
+import React from "react";
 import { useNavigate } from "react-router-dom";
 
-export const Navbar = () => {
+export const Navbar = ({ color }) => {
   let navigate = useNavigate();
 
   return (
-    <div className="navbar__wrapper">
-      <div className="title__container">
-        <h1
-          onClick={() => {
-            navigate("/");
-          }}
-        >
-          DUK
-        </h1>
+    <React.Fragment>
+      <div className="navbar__wrapper">
+        <div className="title__container">
+          <h1
+            onClick={() => {
+              navigate("/");
+            }}
+            style={color ? color : null}
+          >
+            DUK
+          </h1>
+        </div>
       </div>
-      <div className="menu__container">Box</div>
-    </div>
+    </React.Fragment>
   );
 };

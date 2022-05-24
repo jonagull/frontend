@@ -9,16 +9,6 @@ export const DukPage = () => {
 
   return (
     <React.Fragment>
-      {/* <h1
-        style={{
-          color: "white",
-          display: "flex",
-          justifyContent: "center",
-          fontSize: "150px",
-        }}
-      >
-        DUK
-      </h1> */}
       <div className="duk-page__wrapper">
         <div className="duk-content__wrapper">
           <div className="header__container">
