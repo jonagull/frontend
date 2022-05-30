@@ -35,7 +35,6 @@ export const LandingPage = () => {
           </div>
         </div>
       </div>
-      <EmailModal />
     </React.Fragment>
   );
 };

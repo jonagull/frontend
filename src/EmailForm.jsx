@@ -7,6 +7,7 @@ import TextField from "@mui/material/TextField";
 import { Box } from "@mui/system";
 import React, { useRef, useState } from "react";
 import styled from "styled-components";
+import ThumbUpIcon from "@mui/icons-material/ThumbUp";
 
 export const EmailForm = () => {
   const FormWrapper = styled.div`
@@ -84,7 +85,7 @@ export const EmailForm = () => {
             <TextField
               name="user_name"
               id="outlined-basic"
-              label="Fornavn, Etternavn"
+              label="Navn"
               variant="outlined"
               required
             />
@@ -92,15 +93,16 @@ export const EmailForm = () => {
             <TextField
               name="user_number"
               id="outlined-basic"
-              label="Ditt nummer"
+              label="Telefonnummer"
               variant="outlined"
             />
 
             <TextField
               name="user_email"
               id="outlined-basic"
-              label="Din E-post"
+              label="E-post"
               variant="outlined"
+              required
             />
 
             <TextField
@@ -109,6 +111,7 @@ export const EmailForm = () => {
               label="Melding"
               variant="outlined"
               multiline
+              required
             />
           </FieldWrapper>
 
@@ -122,7 +125,15 @@ export const EmailForm = () => {
             Send
           </Button>
         </form>
-        <p>{resultText ? "Sendt!" : "Noe gikk galt"}</p>
+        <Box>
+          {resultText ? (
+            <Box>
+              <ThumbUpIcon />
+            </Box>
+          ) : (
+            <Box></Box>
+          )}
+        </Box>
       </FormWrapper>
     </React.Fragment>
   );
