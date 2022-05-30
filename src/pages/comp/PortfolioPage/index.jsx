@@ -57,7 +57,7 @@ export const PortfolioPage = () => {
             style={{ borderRadius: "20px" }}
             width="900"
             height="500"
-            src={youtubeUrl && youtubeUrl.data[0].attributes.youtube_link}
+            src={youtubeUrl && youtubeUrl.data[0].attributes.youtubeUrl}
           ></iframe>
         </div>
         <hr
