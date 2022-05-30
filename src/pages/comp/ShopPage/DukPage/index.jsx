@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { apiUrl } from "../../../../apiShit";
+import EmailModal from "../../../../EmailForm";
 import { useGetDukContent } from "./useGetDukContent";
 
 export const DukPage = () => {
@@ -16,6 +17,7 @@ export const DukPage = () => {
           </div>
           <div className="desc__container">
             <p>{dukContent && dukContent.data[0].attributes.description}</p>
+            <EmailModal invert={false} />
           </div>
         </div>
         <div className="image__container">

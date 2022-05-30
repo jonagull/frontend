@@ -4,6 +4,7 @@ import { useGetPortfolioContent } from "./useGetPortfolioContent";
 import { apiUrl } from "../../../apiShit";
 import { useGetYoutubeUrl } from "./useGetYoutubeUrl";
 import { Navbar } from "../../Navbar";
+import EmailModal from "../../../EmailForm";
 
 export const PortfolioPage = () => {
   const [projectData, setProjectData] = useState();
@@ -31,6 +32,7 @@ export const PortfolioPage = () => {
                 {portfolioContentData &&
                   portfolioContentData.data.attributes.description}
               </p>
+              <EmailModal invert={true} />
             </div>
             <div className="arrow-10"></div>
           </div>

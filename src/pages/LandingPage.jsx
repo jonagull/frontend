@@ -1,5 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import EmailModal, { EmailForm } from "../EmailForm";
 import { Navbar } from "./Navbar";
 
 export const LandingPage = () => {
@@ -34,6 +35,7 @@ export const LandingPage = () => {
           </div>
         </div>
       </div>
+      <EmailModal />
     </React.Fragment>
   );
 };
