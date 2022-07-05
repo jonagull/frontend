@@ -5,7 +5,7 @@ import miscpic from "./assets/index.png";
 import { useNavigate } from "react-router-dom";
 import Collapse from "@material-ui/core/Collapse";
 import { MicsPage } from "./shopCategoriesPages/mics";
-import { Button, styled } from "@material-ui/core";
+import { styled } from "@material-ui/core";
 import IconButton from "@mui/material/IconButton";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import { DukPage } from "./DukPage";

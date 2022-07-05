@@ -13,6 +13,8 @@ export const PortfolioPage = () => {
   const [portfolioContentData, setPortfolioContentData] = useState();
   const [youtubeUrl, setYoutubeUrl] = useState();
 
+  console.log(projectData);
+
   useGetProjects(setProjectData);
   useGetPortfolioContent(setPortfolioContentData);
   useGetYoutubeUrl(setYoutubeUrl);
@@ -83,7 +85,9 @@ export const PortfolioPage = () => {
               >
                 <div className="content__container">
                   <h1>{x.attributes.ProjectTitle}</h1>
-                  <p>{x.attributes.ProjectDescription}</p>
+                  <p style={{ whiteSpace: "pre-wrap" }}>
+                    {x.attributes.ProjectDescription}
+                  </p>
                   {x.attributes.youtubeLink && (
                     <Button
                       type="submit"
