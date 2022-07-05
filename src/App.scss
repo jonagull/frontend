@@ -254,7 +254,7 @@ body {
       font-family: "Poppins";
       font-style: normal;
       font-weight: 400;
-      font-size: 20px;
+      font-size: 14px;
       line-height: 100.69%;
       letter-spacing: -0.045em;
       width: 432px;
@@ -290,7 +290,7 @@ body {
       font-family: "Poppins";
       font-style: normal;
       font-weight: 400;
-      font-size: 20px;
+      font-size: 14px;
       line-height: 100.69%;
       letter-spacing: -0.045em;
       width: 432px;
@@ -308,7 +308,6 @@ body {
 
 
   .title__container {
-    margin-bottom: 40px;
     
     h1 {
       font-family: 'Poppins';
@@ -322,6 +321,8 @@ body {
     }
   }
   .categories__wrapper {
+
+    padding: 70px;
 
   h1 {
     font-family: 'Poppins';
@@ -338,7 +339,9 @@ body {
 
     .category__container {
       display: flex;
-      justify-content: space-around;
+      justify-content: space-between;
+      margin-top: 20px;
+      padding: 40px;
 
     }
 
@@ -353,6 +356,7 @@ body {
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      width: 50%;
 
       button {
         height: 70px;

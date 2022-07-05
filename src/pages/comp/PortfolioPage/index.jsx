@@ -5,6 +5,8 @@ import { apiUrl } from "../../../apiShit";
 import { useGetYoutubeUrl } from "./useGetYoutubeUrl";
 import { Navbar } from "../../Navbar";
 import EmailModal from "../../../EmailForm";
+import VideoLibraryIcon from "@mui/icons-material/VideoLibrary";
+import Button from "@mui/material/Button";
 
 export const PortfolioPage = () => {
   const [projectData, setProjectData] = useState();
@@ -82,6 +84,19 @@ export const PortfolioPage = () => {
                 <div className="content__container">
                   <h1>{x.attributes.ProjectTitle}</h1>
                   <p>{x.attributes.ProjectDescription}</p>
+                  {x.attributes.youtubeLink && (
+                    <Button
+                      type="submit"
+                      value="video"
+                      variant="contained"
+                      endIcon={<VideoLibraryIcon />}
+                      href={x.attributes.youtubeLink}
+                      target="_blank"
+                      style={{ backgroundColor: "black", marginTop: "10px" }}
+                    >
+                      Video
+                    </Button>
+                  )}
                 </div>
                 <div className="image__container">
                   <img

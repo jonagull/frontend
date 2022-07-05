@@ -63,19 +63,21 @@ export const ShopPage = () => {
           <div className="category__container">
             <div className="title-button__container">
               <h1>Mikrofoner</h1>
-              <ExpandMore
-                expand={micExpanded}
-                onClick={handleMicExpand}
-                aria-expanded={micExpanded}
-                aria-label="show more"
-                style={{
-                  backgroundColor: "white",
-                  borderRadius: "50px",
-                  width: "70px",
-                }}
-              >
-                <ExpandMoreIcon style={{ color: "black" }} />
-              </ExpandMore>
+              <div>
+                <ExpandMore
+                  expand={micExpanded}
+                  onClick={handleMicExpand}
+                  aria-expanded={micExpanded}
+                  aria-label="show more"
+                  style={{
+                    backgroundColor: "white",
+                    borderRadius: "50px",
+                    width: "70px",
+                  }}
+                >
+                  <ExpandMoreIcon style={{ color: "black" }} />
+                </ExpandMore>
+              </div>
             </div>
             <div>
               <img src={micpic}></img>
@@ -88,19 +90,21 @@ export const ShopPage = () => {
           <div className="category__container">
             <div className="title-button__container">
               <h1>Mixere</h1>
-              <ExpandMore
-                expand={micExpanded}
-                onClick={handleMixerExpand}
-                aria-expanded={micExpanded}
-                aria-label="show more"
-                style={{
-                  backgroundColor: "white",
-                  borderRadius: "50px",
-                  width: "70px",
-                }}
-              >
-                <ExpandMoreIcon style={{ color: "black" }} />
-              </ExpandMore>
+              <div>
+                <ExpandMore
+                  expand={mixerExpanded}
+                  onClick={handleMixerExpand}
+                  aria-expanded={micExpanded}
+                  aria-label="show more"
+                  style={{
+                    backgroundColor: "white",
+                    borderRadius: "50px",
+                    width: "70px",
+                  }}
+                >
+                  <ExpandMoreIcon style={{ color: "black" }} />
+                </ExpandMore>
+              </div>
             </div>
             <div>
               <img src={mixerpic}></img>
@@ -113,19 +117,21 @@ export const ShopPage = () => {
           <div className="category__container">
             <div className="title-button__container">
               <h1>Extra</h1>
-              <ExpandMore
-                expand={micExpanded}
-                onClick={handleMiscExpand}
-                aria-expanded={micExpanded}
-                aria-label="show more"
-                style={{
-                  backgroundColor: "white",
-                  borderRadius: "50px",
-                  width: "70px",
-                }}
-              >
-                <ExpandMoreIcon style={{ color: "black" }} />
-              </ExpandMore>
+              <div>
+                <ExpandMore
+                  expand={miscExpanded}
+                  onClick={handleMiscExpand}
+                  aria-expanded={micExpanded}
+                  aria-label="show more"
+                  style={{
+                    backgroundColor: "white",
+                    borderRadius: "50px",
+                    width: "70px",
+                  }}
+                >
+                  <ExpandMoreIcon style={{ color: "black" }} />
+                </ExpandMore>
+              </div>
             </div>
             <div>
               <img src={miscpic}></img>
