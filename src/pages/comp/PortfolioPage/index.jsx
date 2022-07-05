@@ -13,8 +13,6 @@ export const PortfolioPage = () => {
   const [portfolioContentData, setPortfolioContentData] = useState();
   const [youtubeUrl, setYoutubeUrl] = useState();
 
-  console.log(projectData);
-
   useGetProjects(setProjectData);
   useGetPortfolioContent(setPortfolioContentData);
   useGetYoutubeUrl(setYoutubeUrl);
@@ -32,7 +30,7 @@ export const PortfolioPage = () => {
               </h1>
             </div>
             <div className="desc__container" style={{ color: "black" }}>
-              <p>
+              <p style={{ whiteSpace: "pre-wrap" }}>
                 {portfolioContentData &&
                   portfolioContentData.data.attributes.description}
               </p>
@@ -104,11 +102,10 @@ export const PortfolioPage = () => {
                 </div>
                 <div className="image__container">
                   <img
-                    style={{ width: "400px", height: "auto" }}
+                    style={{ width: "600px", height: "auto" }}
                     src={
                       apiUrl +
-                      x.attributes.project_thumbnail.data.attributes.formats
-                        .thumbnail.url
+                      x.attributes.project_thumbnail.data.attributes.url
                     }
                   />
                 </div>
