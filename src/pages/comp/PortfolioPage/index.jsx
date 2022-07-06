@@ -43,10 +43,9 @@ export const PortfolioPage = () => {
           </div>
           <div className="image__container">
             <img
-              src={`${apiUrl}${
-                portfolioContentData &&
+              src={`${apiUrl}${portfolioContentData &&
                 portfolioContentData.data.attributes.image.data.attributes.url
-              }`}
+                }`}
             ></img>
           </div>
         </div>
@@ -84,11 +83,13 @@ export const PortfolioPage = () => {
                     : "project-right-component__wrapper"
                 }
               >
-                <div className="content__container">
+                <div className="content__container" style={{ whiteSpace: 'pre-wrap' }}>
                   <h1>{x.attributes.ProjectTitle}</h1>
-                  <p style={{ whiteSpace: "pre-wrap" }}>
-                    {x.attributes.ProjectDescription}
-                  </p>
+                  <MarkDownWrapper
+                    markdown={
+                      x.attributes.ProjectDescription
+                    }
+                  />
                   {x.attributes.youtubeLink && (
                     <Button
                       type="submit"

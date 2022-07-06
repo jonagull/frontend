@@ -1,0 +1,43 @@
+import React from "react";
+import styledComponents from "styled-components";
+
+const ServivceWrapper = styledComponents.div`
+    display: flex;
+    justify-content: center;
+    color: white;
+`
+
+const ServivceContainer = styledComponents.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 20%;
+    margin: 40px;
+    padding: 50px;
+`
+
+export function ServicesContainer({ data }) {
+
+    return <div>
+        <ServivceWrapper>
+            <ServivceContainer>
+                <div>
+                    <h1>Audio:</h1>
+                    {data.audio}
+                </div>
+            </ServivceContainer>
+            <ServivceContainer>
+                <div>
+                    <h1>Film:</h1>
+                    {data.film}
+                </div>
+            </ServivceContainer>
+            <ServivceContainer>
+                <div>
+                    <h1>Livestream:</h1>
+                    {data.livestream}
+                </div>
+            </ServivceContainer>
+        </ServivceWrapper>
+    </div>;
+}

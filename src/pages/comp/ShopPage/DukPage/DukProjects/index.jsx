@@ -1,11 +1,10 @@
 import React, { useState } from "react";
 import { apiUrl } from "../../../../../apiShit";
+import { MarkDownWrapper } from "../../../MarkDownWrapper";
 import { useGetDukProjects } from "./useGetDukProjects";
 
 export const DukProjects = () => {
   const [dukProjects, setDukProjects] = useState("");
-
-  async function example(a) {}
 
   useGetDukProjects(setDukProjects);
 
@@ -27,7 +26,9 @@ export const DukProjects = () => {
               <div className="duk-project__container">
                 <div className="duk-content__container">
                   <h1>{x.attributes.title}</h1>
-                  <p>{x.attributes.description}</p>
+                  <MarkDownWrapper
+                    markdown={x.attributes.description}
+                  />
                 </div>
                 <div className="duk-image__container">
                   <img
