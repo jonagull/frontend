@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { apiUrl } from "../../../../apiShit";
 import EmailModal from "../../../../EmailForm";
+import { MarkDownWrapper } from "../../MarkDownWrapper";
 import { useGetDukContent } from "./useGetDukContent";
 
 export const DukPage = () => {
@@ -16,7 +17,9 @@ export const DukPage = () => {
             <h1>{dukContent && dukContent.data[0].attributes.title}</h1>
           </div>
           <div className="desc__container">
-            <p>{dukContent && dukContent.data[0].attributes.description}</p>
+            <MarkDownWrapper
+              markdown={dukContent && dukContent.data[0].attributes.description}
+            />
             <EmailModal invert={false} />
           </div>
         </div>

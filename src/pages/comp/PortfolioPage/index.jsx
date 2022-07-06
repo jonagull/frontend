@@ -7,6 +7,7 @@ import { Navbar } from "../../Navbar";
 import EmailModal from "../../../EmailForm";
 import VideoLibraryIcon from "@mui/icons-material/VideoLibrary";
 import Button from "@mui/material/Button";
+import { MarkDownWrapper } from "../MarkDownWrapper";
 
 export const PortfolioPage = () => {
   const [projectData, setProjectData] = useState();
@@ -30,10 +31,12 @@ export const PortfolioPage = () => {
               </h1>
             </div>
             <div className="desc__container" style={{ color: "black" }}>
-              <p style={{ whiteSpace: "pre-wrap" }}>
-                {portfolioContentData &&
-                  portfolioContentData.data.attributes.description}
-              </p>
+              <MarkDownWrapper
+                markdown={
+                  portfolioContentData &&
+                  portfolioContentData.data.attributes.description
+                }
+              />
               <EmailModal invert={true} />
             </div>
             <div className="arrow-10"></div>
