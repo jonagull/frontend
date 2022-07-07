@@ -13,9 +13,9 @@ export const DukProjects = () => {
       <div className="duk-projects__wrapper">
         <h1
           style={{
-            display: "flex",
-            justifyContent: "space-evenly",
-            width: "100vw",
+            marginLeft: "auto",
+            marginRight: "auto",
+            marginBottom: "20px",
           }}
         >
           Tidligere arbeid:
