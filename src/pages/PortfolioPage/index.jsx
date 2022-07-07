@@ -25,7 +25,7 @@ export const PortfolioPage = () => {
         <div className="duk-page__wrapper">
           <div className="duk-content__wrapper">
             <div className="header__container">
-              <h1 style={{ color: "black" }}>
+              <h1>
                 {portfolioContentData &&
                   portfolioContentData.data.attributes.title}
               </h1>
