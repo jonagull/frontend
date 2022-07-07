@@ -20,7 +20,7 @@ export const PortfolioPage = () => {
 
   return (
     <React.Fragment>
-      <Navbar color={{ color: "black" }} />
+      <Navbar />
       <div className="project-component__wrapper">
         <div className="duk-page__wrapper">
           <div className="duk-content__wrapper">
@@ -30,14 +30,14 @@ export const PortfolioPage = () => {
                   portfolioContentData.data.attributes.title}
               </h1>
             </div>
-            <div className="desc__container" style={{ color: "black" }}>
+            <div className="desc__container">
               <MarkDownWrapper
                 markdown={
                   portfolioContentData &&
                   portfolioContentData.data.attributes.description
                 }
               />
-              <EmailModal invert={true} />
+              <EmailModal invert={false} />
             </div>
             <div className="arrow-10"></div>
           </div>
@@ -98,7 +98,11 @@ export const PortfolioPage = () => {
                       endIcon={<VideoLibraryIcon />}
                       href={x.attributes.youtubeLink}
                       target="_blank"
-                      style={{ backgroundColor: "black", marginTop: "10px" }}
+                      style={{
+                        backgroundColor: "white",
+                        color: "black",
+                        marginTop: "10px",
+                      }}
                     >
                       Video
                     </Button>

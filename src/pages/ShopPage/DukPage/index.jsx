@@ -23,7 +23,7 @@ export const DukPage = () => {
             />
 
             <div style={{ marginTop: "15px" }}>
-              <EmailModal invert={false} />
+              <EmailModal invert={true} />
             </div>
           </div>
         </div>

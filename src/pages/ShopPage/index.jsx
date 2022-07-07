@@ -13,6 +13,7 @@ import { MixersPage } from "./shopCategoriesPages/mixers";
 import { MiscPage } from "./shopCategoriesPages/misc";
 import { DukProjects } from "./DukPage/DukProjects";
 import { Navbar } from "../../Components/Navbar";
+import { chevronButtonStyle } from "../../constants/theme";
 
 const ExpandMore = styled((props) => {
   const { expand, ...other } = props;
@@ -44,7 +45,7 @@ export const ShopPage = () => {
 
   return (
     <React.Fragment>
-      <Navbar />
+      <Navbar color={{ color: "black" }} />
       <div className="shop__wrapper">
         <DukPage />
         <DukProjects />
@@ -69,13 +70,9 @@ export const ShopPage = () => {
                   onClick={handleMicExpand}
                   aria-expanded={micExpanded}
                   aria-label="show more"
-                  style={{
-                    backgroundColor: "white",
-                    borderRadius: "50px",
-                    width: "70px",
-                  }}
+                  style={chevronButtonStyle}
                 >
-                  <ExpandMoreIcon style={{ color: "black" }} />
+                  <ExpandMoreIcon />
                 </ExpandMore>
               </div>
             </div>
@@ -96,13 +93,9 @@ export const ShopPage = () => {
                   onClick={handleMixerExpand}
                   aria-expanded={micExpanded}
                   aria-label="show more"
-                  style={{
-                    backgroundColor: "white",
-                    borderRadius: "50px",
-                    width: "70px",
-                  }}
+                  style={chevronButtonStyle}
                 >
-                  <ExpandMoreIcon style={{ color: "black" }} />
+                  <ExpandMoreIcon />
                 </ExpandMore>
               </div>
             </div>
@@ -123,13 +116,9 @@ export const ShopPage = () => {
                   onClick={handleMiscExpand}
                   aria-expanded={micExpanded}
                   aria-label="show more"
-                  style={{
-                    backgroundColor: "white",
-                    borderRadius: "50px",
-                    width: "70px",
-                  }}
+                  style={chevronButtonStyle}
                 >
-                  <ExpandMoreIcon style={{ color: "black" }} />
+                  <ExpandMoreIcon />
                 </ExpandMore>
               </div>
             </div>

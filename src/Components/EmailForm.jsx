@@ -175,6 +175,7 @@ export default function EmailModal({ invert }) {
                 backgroundColor: "white",
                 fontFamily: "poppins",
                 color: "black",
+                marginTop: "20px",
               }
         }
       >

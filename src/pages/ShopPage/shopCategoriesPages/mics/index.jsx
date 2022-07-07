@@ -14,11 +14,7 @@ export const MicsPage = () => {
         {micData &&
           micData.data.map((x, key) => (
             <div className="mic-content__wrapper">
-              <div
-                key={key}
-                className="mic-content__container"
-                style={{ color: "white" }}
-              >
+              <div key={key} className="mic-content__container">
                 <h2>{x.attributes.title && x.attributes.title}</h2>
                 <p>{x.attributes.description && x.attributes.description}</p>
                 <Button
@@ -28,8 +24,9 @@ export const MicsPage = () => {
                   style={{
                     width: "70px",
                     borderRadius: "50px",
-                    backgroundColor: "white",
+                    backgroundColor: "black",
                     marginTop: "10px",
+                    color: "white",
                   }}
                 >
                   <h4 style={{ fontSize: "15px", fontWeight: "800" }}>Link</h4>
