@@ -11,25 +11,29 @@ export const LandingPage = () => {
       <div className="landing-page__wrapper">
         <div className="black-side__wrapper">
           <div className="black-content__container">
-            <h1>Filmaker Screenwriter Soundguy</h1>
+            <h1>Om Daniel</h1>
+            <h1>Utvalgte Prosjekter</h1>
             <button
               onClick={() => {
                 navigate("/portfolio");
               }}
             >
-              Portfolio
+              Daniel
             </button>
           </div>
         </div>
         <div className="white-side__wrapper">
           <div className="white-content__container">
-            <h1>I also rent out stuff.</h1>
+            <h1>Om DUK</h1>
+            <h1>Våre tjenester</h1>
+            <h1>Tidligere Arbeid</h1>
+            <h1>Utleie</h1>
             <button
               onClick={() => {
                 navigate("/shop");
               }}
             >
-              Shop
+              DUK
             </button>
           </div>
         </div>

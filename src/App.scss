@@ -78,13 +78,13 @@ body {
     }
 
     .black-content__container {
-      width: 431px;
+      width: 500px;
       height: 193px;
       transform: translateY(-70px);
 
       h1 {
-        font-size: 60px;
-        line-height: 0.85;
+        font-size: 50px;
+        line-height: 1;
       }
       button {
         width: 185px;
@@ -113,11 +113,12 @@ body {
 
     .white-content__container {
       height: 338px;
-      width: 277px;
+      width: 500px;
+      margin-top: -190px;
 
       h1 {
-        font-size: 60px;
-        line-height: 0.85;
+        font-size: 50px;
+        line-height: 1;
       }
       button {
         width: 185px;
