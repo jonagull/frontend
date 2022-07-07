@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import { useGetProjects } from "./useGetProjecs";
 import { useGetPortfolioContent } from "./useGetPortfolioContent";
-import { apiUrl } from "../../../apiShit";
 import { useGetYoutubeUrl } from "./useGetYoutubeUrl";
-import { Navbar } from "../../Navbar";
-import EmailModal from "../../../EmailForm";
 import VideoLibraryIcon from "@mui/icons-material/VideoLibrary";
 import Button from "@mui/material/Button";
-import { MarkDownWrapper } from "../MarkDownWrapper";
+import { apiUrl } from "../../constants/baseApiUrl";
+import { Navbar } from "../../Components/Navbar";
+import EmailModal from "../../Components/EmailForm";
+import { MarkDownWrapper } from "../../Components/MarkDownWrapper";
 
 export const PortfolioPage = () => {
   const [projectData, setProjectData] = useState();
@@ -43,9 +43,10 @@ export const PortfolioPage = () => {
           </div>
           <div className="image__container">
             <img
-              src={`${apiUrl}${portfolioContentData &&
+              src={`${apiUrl}${
+                portfolioContentData &&
                 portfolioContentData.data.attributes.image.data.attributes.url
-                }`}
+              }`}
             ></img>
           </div>
         </div>
@@ -83,13 +84,12 @@ export const PortfolioPage = () => {
                     : "project-right-component__wrapper"
                 }
               >
-                <div className="content__container" style={{ whiteSpace: 'pre-wrap' }}>
+                <div
+                  className="content__container"
+                  style={{ whiteSpace: "pre-wrap" }}
+                >
                   <h1>{x.attributes.ProjectTitle}</h1>
-                  <MarkDownWrapper
-                    markdown={
-                      x.attributes.ProjectDescription
-                    }
-                  />
+                  <MarkDownWrapper markdown={x.attributes.ProjectDescription} />
                   {x.attributes.youtubeLink && (
                     <Button
                       type="submit"

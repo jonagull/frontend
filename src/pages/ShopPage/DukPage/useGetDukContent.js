@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { apiUrl } from "../../../../apiShit";
+import { apiUrl } from "../../../constants/baseApiUrl";
 
 export const useGetDukContent = (setDukContent) => {
   const fetchData = () => {

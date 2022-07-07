@@ -1,12 +1,12 @@
 import "./App.scss";
-import { PortfolioPage } from "./pages/comp/PortfolioPage";
 import { LandingPage } from "./pages/LandingPage";
 import { Route, BrowserRouter as Router, Link, Routes } from "react-router-dom";
 import React from "react";
+import { ShopPage } from "./pages/ShopPage";
+import { MicsPage } from "./pages/ShopPage/shopCategoriesPages/mics";
+import { MixersPage } from "./pages/ShopPage/shopCategoriesPages/mixers";
 import { ErrorPage } from "./pages/ErrorPage";
-import { ShopPage } from "./pages/comp/ShopPage";
-import { MicsPage } from "./pages/comp/ShopPage/shopCategoriesPages/mics";
-import { MixersPage } from "./pages/comp/ShopPage/shopCategoriesPages/mixers";
+import { PortfolioPage } from "./pages/PortfolioPage";
 
 function App() {
   return (

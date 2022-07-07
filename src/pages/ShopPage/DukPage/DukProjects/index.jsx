@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { apiUrl } from "../../../../../apiShit";
-import { MarkDownWrapper } from "../../../MarkDownWrapper";
+import { apiUrl } from "../../../../constants/baseApiUrl";
+import { MarkDownWrapper } from "../../../../Components/MarkDownWrapper";
 import { useGetDukProjects } from "./useGetDukProjects";
 
 export const DukProjects = () => {
@@ -26,9 +26,7 @@ export const DukProjects = () => {
               <div className="duk-project__container">
                 <div className="duk-content__container">
                   <h1>{x.attributes.title}</h1>
-                  <MarkDownWrapper
-                    markdown={x.attributes.description}
-                  />
+                  <MarkDownWrapper markdown={x.attributes.description} />
                 </div>
                 <div className="duk-image__container">
                   <img

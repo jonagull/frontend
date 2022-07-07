@@ -12,7 +12,7 @@ import { DukPage } from "./DukPage";
 import { MixersPage } from "./shopCategoriesPages/mixers";
 import { MiscPage } from "./shopCategoriesPages/misc";
 import { DukProjects } from "./DukPage/DukProjects";
-import { Navbar } from "../../Navbar";
+import { Navbar } from "../../Components/Navbar";
 
 const ExpandMore = styled((props) => {
   const { expand, ...other } = props;

@@ -1,6 +1,6 @@
 import { Button } from "@material-ui/core";
 import React, { useState } from "react";
-import { apiUrl } from "../../../../../apiShit";
+import { apiUrl } from "../../../../constants/baseApiUrl";
 import { useGetMisc } from "./useGetMisc";
 
 export const MiscPage = () => {
