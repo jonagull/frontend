@@ -24,7 +24,8 @@ export const MiscPage = () => {
                   style={{
                     width: "70px",
                     borderRadius: "50px",
-                    backgroundColor: "white",
+                    backgroundColor: "black",
+                    color: "white",
                     marginTop: "10px",
                   }}
                 >
