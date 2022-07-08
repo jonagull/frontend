@@ -14,7 +14,6 @@ const ServivceContainer = styledComponents.div`
     margin: 40px;
     padding: 50px;
     border-radius: 30px;
-    box-shadow: 4px 8px 36px -13px rgba(0,0,0,0.75);
 `;
 
 export function ServicesContainer({ data }) {
