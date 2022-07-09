@@ -5,6 +5,7 @@ import { MarkDownWrapper } from "../../../Components/MarkDownWrapper";
 const ServivceWrapper = styledComponents.div`
     display: flex;
     justify-content: center;
+    align-items: flex-start;
 `;
 
 const ServivceContainer = styledComponents.div`
