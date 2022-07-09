@@ -90,13 +90,13 @@ export const PortfolioPage = () => {
                 >
                   <h1>{x.attributes.ProjectTitle}</h1>
                   <MarkDownWrapper markdown={x.attributes.ProjectDescription} />
-                  {x.attributes.youtubeLink && (
+                  {x.attributes.youtubelink && (
                     <Button
                       type="submit"
                       value="video"
                       variant="contained"
                       endIcon={<VideoLibraryIcon />}
-                      href={x.attributes.youtubeLink}
+                      href={x.attributes.youtubelink}
                       target="_blank"
                       style={{
                         backgroundColor: "white",
