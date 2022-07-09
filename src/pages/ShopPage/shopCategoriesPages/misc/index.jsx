@@ -9,12 +9,12 @@ export const MiscPage = () => {
   useGetMisc(setMiscData);
 
   return (
-    <div className="mics__wrapper">
-      <div className="mic-products__wrapper">
+    <div className="product-category__wrapper">
+      <div className="products__wrapper">
         {miscData &&
           miscData.data.map((x, key) => (
-            <div className="mic-content__wrapper">
-              <div key={key} className="mic-content__container">
+            <div className="product-content__wrapper">
+              <div key={key} className="product-content__container">
                 <h2>{x.attributes.title && x.attributes.title}</h2>
                 <p>{x.attributes.description && x.attributes.description}</p>
                 <Button
@@ -32,7 +32,7 @@ export const MiscPage = () => {
                   <h4 style={{ fontSize: "15px", fontWeight: "800" }}>Link</h4>
                 </Button>
               </div>
-              <div className="mic-image__container">
+              <div className="product-image__container">
                 <img
                   src={
                     x.attributes.thumbnail.data
