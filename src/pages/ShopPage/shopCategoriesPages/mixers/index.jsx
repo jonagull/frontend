@@ -14,7 +14,7 @@ export const MixersPage = () => {
         {mixerData &&
           mixerData.data.map((x, key) => (
             <div className="product-content__wrapper">
-              <div key={key} className="product-content__container pink-text">
+              <div key={key} className="product-content__container">
                 <h2>{x.attributes.title && x.attributes.title}</h2>
                 <p>{x.attributes.description && x.attributes.description}</p>
                 <Button

@@ -45,7 +45,7 @@ export const ShopPage = () => {
 
   return (
     <React.Fragment>
-      <Navbar color={{ color: "black" }} />
+      <Navbar invert={true} />
       <div className="shop__wrapper">
         <DukPage />
         <DukProjects />

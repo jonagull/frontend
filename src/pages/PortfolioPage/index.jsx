@@ -20,7 +20,7 @@ export const PortfolioPage = () => {
 
   return (
     <React.Fragment>
-      <Navbar />
+      <Navbar invert={false} />
       <div className="project-component__wrapper">
         <div className="duk-page__wrapper">
           <div className="duk-content__wrapper">

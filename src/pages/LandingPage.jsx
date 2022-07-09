@@ -7,9 +7,16 @@ export const LandingPage = () => {
 
   return (
     <React.Fragment>
-      <Navbar />
       <div className="landing-page__wrapper">
         <div className="black-side__wrapper">
+          <h1
+            style={{ color: "white", position: "absolute", top: 10, left: 40 }}
+            onClick={() => {
+              navigate("/");
+            }}
+          >
+            DUK
+          </h1>
           <div className="black-content__container">
             <h1>Om Daniel</h1>
             <h1>Utvalgte Prosjekter</h1>
