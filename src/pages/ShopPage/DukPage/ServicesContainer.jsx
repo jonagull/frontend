@@ -1,5 +1,6 @@
 import React from "react";
 import styledComponents from "styled-components";
+import { MarkDownWrapper } from "../../../Components/MarkDownWrapper";
 
 const ServivceWrapper = styledComponents.div`
     display: flex;
@@ -23,19 +24,19 @@ export function ServicesContainer({ data }) {
         <ServivceContainer>
           <div>
             <h1>Audio:</h1>
-            {data.audio}
+            <MarkDownWrapper markdown={data.audio} />
           </div>
         </ServivceContainer>
         <ServivceContainer>
           <div>
             <h1>Film:</h1>
-            {data.film}
+            <MarkDownWrapper markdown={data.film} />
           </div>
         </ServivceContainer>
         <ServivceContainer>
           <div>
             <h1>Livestream:</h1>
-            {data.livestream}
+            <MarkDownWrapper markdown={data.livestream} />
           </div>
         </ServivceContainer>
       </ServivceWrapper>

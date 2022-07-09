@@ -73,7 +73,7 @@ export const PortfolioPage = () => {
           }}
         ></hr>
         <div>
-          <h1 style={{ marginBottom: "30px" }}>Prosjekter:</h1>
+          <h1 style={{ marginBottom: "30px" }}>Utvalgte Prosjekter:</h1>
           {projectData &&
             projectData.data.map((x, key) => (
               <div

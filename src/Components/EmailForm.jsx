@@ -53,10 +53,6 @@ export const EmailForm = () => {
   const sendEmail = (e) => {
     e.preventDefault();
 
-    console.log("form ran");
-
-    console.log("form when email is sent", form);
-
     emailjs
       .sendForm(
         "service_0cwge7b",
@@ -66,11 +62,9 @@ export const EmailForm = () => {
       )
       .then(
         (result) => {
-          console.log(result.text);
           setResultText(result.text);
         },
         (error) => {
-          console.log(error.text);
           setResultText(error.text);
         }
       );
