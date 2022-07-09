@@ -59,10 +59,10 @@ export const PortfolioPage = () => {
         ></hr>
         <div className="video__container">
           <iframe
-            style={{ borderRadius: "20px" }}
+            style={{ borderRadius: "20px", border: "none" }}
             width="900"
             height="500"
-            src={youtubeUrl && youtubeUrl.data[0].attributes.youtubeUrl}
+            src={youtubeUrl && youtubeUrl.data[0].attributes.Link}
           ></iframe>
         </div>
         <hr
