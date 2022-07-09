@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import ScrollIntoView from "react-scroll-into-view";
 
 export const Navbar = ({ invert }) => {
   let navigate = useNavigate();
@@ -24,7 +25,7 @@ export const Navbar = ({ invert }) => {
             : "navbar__wrapper navbar__bg"
         }
       >
-        <div className="">
+        <div style={{ display: "flex" }}>
           <h1
             onClick={() => {
               navigate("/");
@@ -32,6 +33,21 @@ export const Navbar = ({ invert }) => {
           >
             DUK
           </h1>
+          {invert && (
+            <ScrollIntoView alignToTop={true} selector="#hr-arbeid">
+              <h1 style={{ marginLeft: "200px" }}>Arbeid</h1>
+            </ScrollIntoView>
+          )}
+          {invert && (
+            <ScrollIntoView selector=".title__container">
+              <h1 style={{ marginLeft: "200px" }}>Utleie</h1>
+            </ScrollIntoView>
+          )}
+          {!invert && (
+            <ScrollIntoView alignToTop={true} selector="#hr-prosjekter">
+              <h1 style={{ marginLeft: "200px" }}>Prosjekter</h1>
+            </ScrollIntoView>
+          )}
         </div>
       </div>
     </React.Fragment>

@@ -65,13 +65,22 @@ export const PortfolioPage = () => {
             src={youtubeUrl && youtubeUrl.data[0].attributes.Link}
           ></iframe>
         </div>
-        <hr
+        <div
+          id="hr-prosjekter"
           style={{
-            marginTop: "40px",
-            width: "80%",
-            marginBottom: "40px",
+            height: "70px",
+            width: "90%",
+            marginBottom: "20px",
           }}
-        ></hr>
+        >
+          <hr
+            style={{
+              width: "100%",
+              position: "relative",
+              top: 80,
+            }}
+          />
+        </div>
         <div>
           <h1 style={{ marginBottom: "30px" }}>Utvalgte Prosjekter:</h1>
           {projectData &&

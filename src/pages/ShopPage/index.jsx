@@ -50,14 +50,20 @@ export const ShopPage = () => {
         <DukPage />
         <DukProjects />
         <div className="title__container">
+          <hr
+            style={{
+              width: "80%",
+              marginLeft: "10%",
+              marginBottom: "70px",
+            }}
+          />
           <h1>UTLEIE</h1>
           <hr
             style={{
-              backgroundColor: "white",
               width: "80%",
               marginLeft: "10%",
             }}
-          ></hr>
+          />
         </div>
 
         <div className="categories__wrapper">

@@ -37,7 +37,7 @@ export const DukPage = () => {
         </div>
       </div>
       <ServicesContainer data={dukContent && dukContent.data[0].attributes} />
-      <hr style={{ marginBottom: "50px" }}></hr>
+      <hr id="hr-arbeid"></hr>
     </React.Fragment>
   );
 };
