@@ -37,7 +37,13 @@ export const DukPage = () => {
         </div>
       </div>
       <ServicesContainer data={dukContent && dukContent.data[0].attributes} />
-      <hr id="hr-arbeid"></hr>
+      <hr
+        id="hr-arbeid"
+        style={{
+          width: "80%",
+          marginLeft: "10%",
+        }}
+      />
     </React.Fragment>
   );
 };
