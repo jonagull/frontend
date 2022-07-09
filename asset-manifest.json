@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/static/css/main.6118cc5e.css",
-    "main.js": "/static/js/main.8573d046.js",
+    "main.css": "/static/css/main.f830d7ba.css",
+    "main.js": "/static/js/main.8af1abf6.js",
     "static/js/787.cda612ba.chunk.js": "/static/js/787.cda612ba.chunk.js",
     "static/media/roland_v_600uhd_4k_hdr_multi_format_video_1457842.jpg": "/static/media/roland_v_600uhd_4k_hdr_multi_format_video_1457842.e3a93952506b81c442ed.jpg",
     "static/media/shotgun-mic.jpg": "/static/media/shotgun-mic.156dc54eaa1e49e00e02.jpg",
     "index.html": "/index.html",
-    "main.6118cc5e.css.map": "/static/css/main.6118cc5e.css.map",
-    "main.8573d046.js.map": "/static/js/main.8573d046.js.map",
+    "main.f830d7ba.css.map": "/static/css/main.f830d7ba.css.map",
+    "main.8af1abf6.js.map": "/static/js/main.8af1abf6.js.map",
     "787.cda612ba.chunk.js.map": "/static/js/787.cda612ba.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.6118cc5e.css",
-    "static/js/main.8573d046.js"
+    "static/css/main.f830d7ba.css",
+    "static/js/main.8af1abf6.js"
   ]
 }
