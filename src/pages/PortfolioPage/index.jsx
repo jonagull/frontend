@@ -43,17 +43,16 @@ export const PortfolioPage = () => {
           </div>
           <div className="image__container">
             <img
-              src={`${apiUrl}${
-                portfolioContentData &&
+              src={`${apiUrl}${portfolioContentData &&
                 portfolioContentData.data.attributes.image.data.attributes.url
-              }`}
+                }`}
             ></img>
           </div>
         </div>
 
         <hr
           style={{
-            width: "80%",
+            width: "90%",
             marginBottom: "40px",
           }}
         ></hr>
