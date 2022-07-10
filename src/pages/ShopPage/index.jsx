@@ -69,7 +69,7 @@ export const ShopPage = () => {
         <div className="categories__wrapper">
           <div className="category__container">
             <div className="title-button__container">
-              <h1>Mikrofoner</h1>
+              <h2>Mikrofoner</h2>
               <div>
                 <ExpandMore
                   expand={micExpanded}
@@ -86,13 +86,18 @@ export const ShopPage = () => {
               <img src={micpic}></img>
             </div>
           </div>
-          <Collapse in={micExpanded} timeout="auto" easing>
+          <Collapse
+            style={{ display: "flex", justifyContent: "center" }}
+            in={micExpanded}
+            timeout="auto"
+            easing
+          >
             <MicsPage />
           </Collapse>
 
           <div className="category__container">
             <div className="title-button__container">
-              <h1>Mixere</h1>
+              <h2>Mixere</h2>
               <div>
                 <ExpandMore
                   expand={mixerExpanded}
@@ -115,7 +120,7 @@ export const ShopPage = () => {
 
           <div className="category__container">
             <div className="title-button__container">
-              <h1>Extra</h1>
+              <h2>Extra Utstyr</h2>
               <div>
                 <ExpandMore
                   expand={miscExpanded}
