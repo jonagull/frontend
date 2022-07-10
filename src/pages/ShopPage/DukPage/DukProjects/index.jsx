@@ -87,7 +87,7 @@ export const DukProjects = () => {
                 </ExpandMore>
               </div>
             </div>
-            <div style={{ marginRight: "90px" }}>
+            <div style={{ marginRight: "135px" }}>
               <img src={TV}></img>
             </div>
           </div>
@@ -148,7 +148,7 @@ export const DukProjects = () => {
                 </ExpandMore>
               </div>
             </div>
-            <div style={{ marginRight: "110px" }}>
+            <div style={{ marginRight: "140px" }}>
               <img src={Aperture}></img>
             </div>
           </div>
@@ -209,7 +209,7 @@ export const DukProjects = () => {
                 </ExpandMore>
               </div>
             </div>
-            <div>
+            <div style={{ marginRight: "65px" }}>
               <img src={Camera}></img>
             </div>
           </div>
