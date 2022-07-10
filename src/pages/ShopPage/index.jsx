@@ -14,6 +14,9 @@ import { MiscPage } from "./shopCategoriesPages/misc";
 import { DukProjects } from "./DukPage/DukProjects";
 import { Navbar } from "../../Components/Navbar";
 import { chevronButtonStyle } from "../../constants/theme";
+import { WirelessPage } from "./shopCategoriesPages/wireless";
+import { useGetThumbnails } from "./useGetThumbnails";
+import { apiUrl } from "../../constants/baseApiUrl";
 
 const ExpandMore = styled((props) => {
   const { expand, ...other } = props;
@@ -29,9 +32,12 @@ const ExpandMore = styled((props) => {
 export const ShopPage = () => {
   let navigate = useNavigate();
 
+  const [categoryThumbnail, setCategoryThumbnail] = useState("");
+
   const [micExpanded, setMicExpanded] = useState(false);
   const [mixerExpanded, setMixerExpanded] = useState(false);
   const [miscExpanded, setMiscExpanded] = useState(false);
+  const [wirelessExpanded, setWirelessExpanded] = useState(false);
 
   const handleMicExpand = () => {
     setMicExpanded(!micExpanded);
@@ -42,6 +48,11 @@ export const ShopPage = () => {
   const handleMiscExpand = () => {
     setMiscExpanded(!miscExpanded);
   };
+  const handleWirelessExpand = () => {
+    setWirelessExpanded(!wirelessExpanded);
+  };
+
+  useGetThumbnails(setCategoryThumbnail);
 
   return (
     <React.Fragment>
@@ -83,7 +94,13 @@ export const ShopPage = () => {
               </div>
             </div>
             <div>
-              <img src={micpic}></img>
+              <img
+                src={`${apiUrl}${
+                  categoryThumbnail &&
+                  categoryThumbnail.data[0].attributes.microphone.data
+                    .attributes.url
+                }`}
+              ></img>
             </div>
           </div>
           <Collapse
@@ -111,11 +128,45 @@ export const ShopPage = () => {
               </div>
             </div>
             <div>
-              <img src={mixerpic}></img>
+              <img
+                src={`${apiUrl}${
+                  categoryThumbnail &&
+                  categoryThumbnail.data[0].attributes.mixer.data.attributes.url
+                }`}
+              ></img>
             </div>
           </div>
           <Collapse in={mixerExpanded} timeout="auto" easing>
             <MixersPage />
+          </Collapse>
+
+          <div className="category__container">
+            <div className="title-button__container">
+              <h2>Trådløst</h2>
+              <div>
+                <ExpandMore
+                  expand={wirelessExpanded}
+                  onClick={handleWirelessExpand}
+                  aria-expanded={wirelessExpanded}
+                  aria-label="show more"
+                  style={chevronButtonStyle}
+                >
+                  <ExpandMoreIcon />
+                </ExpandMore>
+              </div>
+            </div>
+            <div>
+              <img
+                src={`${apiUrl}${
+                  categoryThumbnail &&
+                  categoryThumbnail.data[0].attributes.wireless.data.attributes
+                    .url
+                }`}
+              ></img>
+            </div>
+          </div>
+          <Collapse in={wirelessExpanded} timeout="auto" easing>
+            <WirelessPage />
           </Collapse>
 
           <div className="category__container">
@@ -134,7 +185,12 @@ export const ShopPage = () => {
               </div>
             </div>
             <div>
-              <img src={miscpic}></img>
+              <img
+                src={`${apiUrl}${
+                  categoryThumbnail &&
+                  categoryThumbnail.data[0].attributes.extra.data.attributes.url
+                }`}
+              ></img>
             </div>
           </div>
           <Collapse in={miscExpanded} timeout="auto" easing>

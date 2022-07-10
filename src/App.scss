@@ -407,9 +407,10 @@ body {
     }
 
     img {
-      width: 300px;
+      width: auto;
       height: 300px;
       border-radius: 40px;
+      object-fit: cover;
     }
 
     .title-button__container {

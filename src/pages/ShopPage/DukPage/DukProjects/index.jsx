@@ -11,6 +11,10 @@ import Collapse from "@material-ui/core/Collapse";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import { chevronButtonStyle } from "../../../../constants/theme";
 import { Button } from "@mui/material";
+import Aperture from "../../assets/aperture.png";
+import People from "../../assets/people.png";
+import TV from "../../assets/tv.png";
+import Camera from "../../assets/tv-camera.jpg";
 
 export const DukProjects = () => {
   const [dukProjects, setDukProjects] = useState(""); // This is for the adds
@@ -83,8 +87,8 @@ export const DukProjects = () => {
                 </ExpandMore>
               </div>
             </div>
-            <div>
-              <img src="https://cdn.dribbble.com/users/987878/screenshots/9150877/media/f6c8c9301ce08004a15cbb60b9d1f2bb.jpg?compress=1"></img>
+            <div style={{ marginRight: "90px" }}>
+              <img src={TV}></img>
             </div>
           </div>
           <Collapse in={adsExpanded} timeout="auto" easing>
@@ -144,8 +148,8 @@ export const DukProjects = () => {
                 </ExpandMore>
               </div>
             </div>
-            <div>
-              <img src="https://socialistmodernism.com/wp-content/uploads/2017/07/placeholder-image.png?w=640"></img>
+            <div style={{ marginRight: "110px" }}>
+              <img src={Aperture}></img>
             </div>
           </div>
           <Collapse in={filmExpanded} timeout="auto" easing>
@@ -206,7 +210,7 @@ export const DukProjects = () => {
               </div>
             </div>
             <div>
-              <img src="https://socialistmodernism.com/wp-content/uploads/2017/07/placeholder-image.png?w=640"></img>
+              <img src={Camera}></img>
             </div>
           </div>
           <Collapse in={tvExpanded} timeout="auto" easing>
@@ -266,8 +270,8 @@ export const DukProjects = () => {
                 </ExpandMore>
               </div>
             </div>
-            <div>
-              <img src="https://socialistmodernism.com/wp-content/uploads/2017/07/placeholder-image.png?w=640"></img>
+            <div style={{ marginRight: "170px" }}>
+              <img src={People}></img>
             </div>
           </div>
           <Collapse in={clientsExpanded} timeout="auto" easing>
