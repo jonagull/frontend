@@ -4,6 +4,7 @@ import EmailModal from "../../../Components/EmailForm";
 import { MarkDownWrapper } from "../../../Components/MarkDownWrapper";
 import { ServicesContainer } from "./ServicesContainer";
 import { useGetDukContent } from "./useGetDukContent";
+import { CarouselComponent } from "../../../Components/CarouselComponent";
 
 export const DukPage = () => {
   const [dukContent, setDukContent] = useState("");
@@ -36,6 +37,9 @@ export const DukPage = () => {
           ></img>
         </div>
       </div>
+
+      <CarouselComponent />
+
       <ServicesContainer data={dukContent && dukContent.data[0].attributes} />
       <hr
         id="hr-arbeid"
