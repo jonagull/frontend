@@ -1,8 +1,4 @@
 import React, { useState } from "react";
-import micpic from "./assets/shotgun-mic.jpg";
-import mixerpic from "./assets/roland_v_600uhd_4k_hdr_multi_format_video_1457842.jpg";
-import miscpic from "./assets/index.png";
-import { useNavigate } from "react-router-dom";
 import Collapse from "@material-ui/core/Collapse";
 import { MicsPage } from "./shopCategoriesPages/mics";
 import { styled } from "@material-ui/core";
@@ -30,7 +26,6 @@ const ExpandMore = styled((props) => {
 }));
 
 export const ShopPage = () => {
-  let navigate = useNavigate();
 
   const [categoryThumbnail, setCategoryThumbnail] = useState("");
 
@@ -95,16 +90,14 @@ export const ShopPage = () => {
             </div>
             <div>
               <img
-                src={`${apiUrl}${
-                  categoryThumbnail &&
+                src={`${apiUrl}${categoryThumbnail &&
                   categoryThumbnail.data[0].attributes.microphone.data
                     .attributes.url
-                }`}
+                  }`}
               ></img>
             </div>
           </div>
           <Collapse
-            style={{ display: "flex", justifyContent: "center" }}
             in={micExpanded}
             timeout="auto"
             easing
@@ -129,10 +122,9 @@ export const ShopPage = () => {
             </div>
             <div>
               <img
-                src={`${apiUrl}${
-                  categoryThumbnail &&
+                src={`${apiUrl}${categoryThumbnail &&
                   categoryThumbnail.data[0].attributes.mixer.data.attributes.url
-                }`}
+                  }`}
               ></img>
             </div>
           </div>
@@ -157,11 +149,10 @@ export const ShopPage = () => {
             </div>
             <div>
               <img
-                src={`${apiUrl}${
-                  categoryThumbnail &&
+                src={`${apiUrl}${categoryThumbnail &&
                   categoryThumbnail.data[0].attributes.wireless.data.attributes
                     .url
-                }`}
+                  }`}
               ></img>
             </div>
           </div>
@@ -186,10 +177,9 @@ export const ShopPage = () => {
             </div>
             <div>
               <img
-                src={`${apiUrl}${
-                  categoryThumbnail &&
+                src={`${apiUrl}${categoryThumbnail &&
                   categoryThumbnail.data[0].attributes.extra.data.attributes.url
-                }`}
+                  }`}
               ></img>
             </div>
           </div>
