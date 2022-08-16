@@ -8,15 +8,20 @@ import { apiUrl } from "../../constants/baseApiUrl";
 import { Navbar } from "../../Components/Navbar";
 import EmailModal from "../../Components/EmailForm";
 import { MarkDownWrapper } from "../../Components/MarkDownWrapper";
+import useCheckMobileScreen from "../../useCheckMobileScreen";
 
 export const PortfolioPage = () => {
   const [projectData, setProjectData] = useState();
   const [portfolioContentData, setPortfolioContentData] = useState();
   const [youtubeUrl, setYoutubeUrl] = useState();
 
+  const isMobile = useCheckMobileScreen();
+
   useGetProjects(setProjectData);
   useGetPortfolioContent(setPortfolioContentData);
   useGetYoutubeUrl(setYoutubeUrl);
+
+  console.log(isMobile)
 
   return (
     <React.Fragment>
@@ -58,9 +63,6 @@ export const PortfolioPage = () => {
         ></hr>
         <div className="video__container">
           <iframe
-            style={{ borderRadius: "20px", border: "none" }}
-            width="900"
-            height="500"
             src={youtubeUrl && youtubeUrl.data[0].attributes.Link}
           ></iframe>
         </div>
@@ -85,10 +87,11 @@ export const PortfolioPage = () => {
           {projectData &&
             projectData.data.map((x, key) => (
               <div
+                style={!isMobile ? {} : { height: "600px", marginBotton: "20px" }}
                 key={key}
                 className={
                   key % 2
-                    ? "project-left-component__wrapper"
+                    ? "project-right-component__wrapper"
                     : "project-right-component__wrapper"
                 }
               >
@@ -116,15 +119,13 @@ export const PortfolioPage = () => {
                     </Button>
                   )}
                 </div>
-                <div className="image__container">
-                  <img
-                    style={{ width: "600px", height: "auto" }}
-                    src={
-                      apiUrl +
-                      x.attributes.project_thumbnail.data.attributes.url
-                    }
-                  />
-                </div>
+                <img
+                  style={isMobile ? { width: '350px', height: 'auto' } : { width: '600px', height: 'auto' }}
+                  src={
+                    apiUrl +
+                    x.attributes.project_thumbnail.data.attributes.url
+                  }
+                />
               </div>
             ))}
         </div>

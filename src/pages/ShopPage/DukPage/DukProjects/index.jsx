@@ -122,10 +122,9 @@ export const DukProjects = () => {
                     </div>
                     <div className="duk-image__container">
                       <img
-                        src={`${apiUrl}${
-                          x.attributes.thumbnail.data &&
+                        src={`${apiUrl}${x.attributes.thumbnail.data &&
                           x.attributes.thumbnail.data.attributes.url
-                        }`}
+                          }`}
                       ></img>
                     </div>
                   </div>
@@ -183,10 +182,9 @@ export const DukProjects = () => {
                     </div>
                     <div className="duk-image__container">
                       <img
-                        src={`${apiUrl}${
-                          x.attributes.thumbnail.data &&
+                        src={`${apiUrl}${x.attributes.thumbnail.data &&
                           x.attributes.thumbnail.data[0].attributes.url
-                        }`}
+                          }`}
                       ></img>
                     </div>
                   </div>
@@ -244,10 +242,9 @@ export const DukProjects = () => {
                     </div>
                     <div className="duk-image__container">
                       <img
-                        src={`${apiUrl}${
-                          x.attributes.thumbnail.data &&
+                        src={`${apiUrl}${x.attributes.thumbnail.data &&
                           x.attributes.thumbnail.data[0].attributes.url
-                        }`}
+                          }`}
                       ></img>
                     </div>
                   </div>
@@ -305,10 +302,9 @@ export const DukProjects = () => {
                     </div>
                     <div className="duk-image__container">
                       <img
-                        src={`${apiUrl}${
-                          x.attributes.thumbnail.data &&
+                        src={`${apiUrl}${x.attributes.thumbnail.data &&
                           x.attributes.thumbnail.data[0].attributes.url
-                        }`}
+                          }`}
                       ></img>
                     </div>
                   </div>
