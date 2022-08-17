@@ -176,6 +176,7 @@ body {
   color: white;
   background-color: black;
 
+
   img {
     width: 600px;
     height: 600px;
@@ -258,6 +259,16 @@ body {
   }
 
 
+  .chosen-projects {
+    margin-bottom: 30px;
+
+
+    @media screen and (max-width: 900px) {
+      font-size: 25px;
+      margin-left: 55px;
+    }
+  }
+
 
 
   .left {
@@ -279,7 +290,6 @@ body {
     justify-content: space-evenly;
     align-items: center;
     border-radius: 30px;
-    box-shadow: 4px 8px 36px -13px rgba(0, 0, 0, 0.75);
 
     .content__container {
 
@@ -300,7 +310,6 @@ body {
         font-size: 14px;
         line-height: 15px;
         letter-spacing: -0.045em;
-        width: 432px;
         white-space: "pre-wrap";
       }
     }
@@ -318,7 +327,6 @@ body {
     display: flex;
     flex-direction: column-reverse;
 
-
     .content__container {
       margin: 0;
 
@@ -335,12 +343,9 @@ body {
       p {
         font-family: "Poppins";
         font-style: normal;
-        font-weight: 400;
         font-size: 14px;
         line-height: 15px;
-        letter-spacing: -0.045em;
-        width: 432px;
-        white-space: "pre-wrap";
+        width: 300px;
       }
     }
   }
@@ -585,6 +590,10 @@ body {
       display: flex;
       width: 80%;
 
+      h1 {
+        font-size: 25px;
+      }
+
 
 
       .desc__container {
@@ -632,8 +641,8 @@ body {
     iframe {
       border-radius: 20px;
       border: none;
-      width: 400px;
-      height: 300px;
+      width: 350px;
+      height: 250px;
     }
   }
 }
