@@ -3,9 +3,12 @@ import { useNavigate } from "react-router-dom";
 import ScrollIntoView from "react-scroll-into-view";
 import HardwareIcon from "@mui/icons-material/Hardware";
 import HomeRepairServiceIcon from "@mui/icons-material/HomeRepairService";
+import useCheckMobileScreen from "../useCheckMobileScreen";
 
 export const Navbar = ({ invert }) => {
   let navigate = useNavigate();
+
+  const isMobile = useCheckMobileScreen();
 
   const [isScrolling, setIsScrolling] = useState(false);
 
@@ -23,19 +26,26 @@ export const Navbar = ({ invert }) => {
               ? "navbar__wrapper navbar__bg"
               : "navbar__wrapper navbar-inverted__bg"
             : isScrolling
-            ? "navbar__wrapper navbar-inverted__bg"
-            : "navbar__wrapper navbar__bg"
+              ? "navbar__wrapper navbar-inverted__bg"
+              : "navbar__wrapper navbar__bg"
         }
       >
         <div
-          style={{
+          style={isMobile ? {
+            display: "flex",
+            justifyContent: "space-between",
+            width: "100%",
+            padding: "0",
+          } : {
             display: "flex",
             justifyContent: "space-between",
             width: "100%",
             padding: "0 60px",
           }}
         >
-          <h1
+          <h1 style={isMobile ? {
+            fontSize: "30px"
+          } : {}}
             onClick={() => {
               navigate("/");
             }}
@@ -43,7 +53,12 @@ export const Navbar = ({ invert }) => {
             DUK
           </h1>
           <div
-            style={{
+            style={isMobile ? {
+              display: "flex",
+              justifyCoxntent: "space-around",
+              alignItems: "center",
+              marginRight: "40px"
+            } : {
               display: "flex",
               justifyContent: "space-around",
               alignItems: "center",
@@ -52,7 +67,11 @@ export const Navbar = ({ invert }) => {
           >
             {invert && (
               <ScrollIntoView alignToTop={true} selector="#hr-arbeid">
-                <span>
+                <span style={isMobile ? {
+                  marginRight: "10px"
+                } : {
+
+                }}>
                   <HardwareIcon />
                   <h2>Arbeid</h2>
                 </span>

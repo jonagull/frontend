@@ -5,9 +5,12 @@ import { MarkDownWrapper } from "../../../Components/MarkDownWrapper";
 import { ServicesContainer } from "./ServicesContainer";
 import { useGetDukContent } from "./useGetDukContent";
 import { CarouselComponent } from "../../../Components/CarouselComponent";
+import useCheckMobileScreen from "../../../useCheckMobileScreen";
 
 export const DukPage = () => {
   const [dukContent, setDukContent] = useState("");
+
+  const isMobile = useCheckMobileScreen();
 
 
   useGetDukContent(setDukContent);
@@ -38,7 +41,7 @@ export const DukPage = () => {
         </div>
       </div>
 
-      <CarouselComponent />
+      {!isMobile && <CarouselComponent />}
 
       <ServicesContainer data={dukContent && dukContent.data[0].attributes} />
       <hr

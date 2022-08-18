@@ -441,7 +441,6 @@ body {
     }
 
 
-
     h1 {
       font-family: 'Poppins';
       font-style: normal;
@@ -535,7 +534,6 @@ body {
 }
 
 
-
 .product-category__wrapper {
   margin: 0;
   width: 100%;
@@ -568,8 +566,6 @@ body {
     }
 
 
-
-
     .product-content__container {
       display: flex;
       flex-direction: column;
@@ -583,8 +579,6 @@ body {
         width: 100%;
         margin-right: 0;
       }
-
-
 
 
       h2 {
@@ -618,7 +612,6 @@ body {
 
 }
 
-
 .pink-text {
   color: hotpink;
 }
@@ -639,14 +632,16 @@ body {
     width: 50%;
     justify-content: center;
 
-
-
     .desc__container {
       display: flex;
       flex-direction: column;
 
       p {
         line-height: 18px;
+
+        @media screen and (max-width: 900px) {
+          font-size: 100px
+        }
       }
 
       button {
@@ -654,8 +649,6 @@ body {
       }
     }
   }
-
-
 
   .image__container {
     display: flex;
@@ -686,18 +679,16 @@ body {
       width: 80%;
 
       h1 {
-        font-size: 15px;
+        font-size: 16px;
       }
-
-
 
       .desc__container {
         display: flex;
         flex-direction: column;
 
         p {
-          line-height: 14px;
-          font-size: 12px;
+          line-height: 15px;
+          font-size: 16px;
         }
 
         button {
@@ -705,8 +696,6 @@ body {
         }
       }
     }
-
-
 
     .image__container {
       display: flex;
