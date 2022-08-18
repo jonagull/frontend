@@ -774,6 +774,7 @@ body {
 
     @media screen and (max-width: 900px) {
       flex-direction: column-reverse;
+      justify-content: center;
     }
 
     .duk-content__container {
@@ -784,7 +785,8 @@ body {
 
       @media screen and (max-width: 900px) {
         width: 80%;
-
+        justify-content: center;
+        align-items: center;
       }
     }
 
