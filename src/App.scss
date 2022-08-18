@@ -300,12 +300,13 @@ body {
 
 
   .chosen-projects {
-    margin-bottom: 30px;
+    margin-left: 40px;
 
 
     @media screen and (max-width: 900px) {
       font-size: 25px;
       margin-left: 55px;
+      margin-bottom: 30px;
     }
   }
 
