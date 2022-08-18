@@ -9,6 +9,7 @@ import { CarouselComponent } from "../../../Components/CarouselComponent";
 export const DukPage = () => {
   const [dukContent, setDukContent] = useState("");
 
+
   useGetDukContent(setDukContent);
 
   return (
@@ -30,10 +31,9 @@ export const DukPage = () => {
         </div>
         <div className="image__container">
           <img
-            src={`${apiUrl}${
-              dukContent &&
+            src={`${apiUrl}${dukContent &&
               dukContent.data[0].attributes.profilepic.data.attributes.url
-            }`}
+              }`}
           ></img>
         </div>
       </div>

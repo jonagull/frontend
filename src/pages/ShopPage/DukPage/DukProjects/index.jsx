@@ -15,6 +15,8 @@ import Aperture from "../../assets/aperture.png";
 import People from "../../assets/people.png";
 import TV from "../../assets/tv.png";
 import Camera from "../../assets/tv-camera.jpg";
+import useCheckMobileScreen from "../../../../useCheckMobileScreen";
+import { CenterFocusStrong } from "@mui/icons-material";
 
 export const DukProjects = () => {
   const [dukProjects, setDukProjects] = useState(""); // This is for the adds
@@ -26,6 +28,8 @@ export const DukProjects = () => {
   useGetDukClients(setDukClients);
   useGetDukTvProductions(setDukTvProductions);
   useGetDukFilmProductions(setDukFilmProductions);
+
+  const isMobile = useCheckMobileScreen();
 
   const ExpandMore = styled((props) => {
     const { expand, ...other } = props;
@@ -60,7 +64,11 @@ export const DukProjects = () => {
     <React.Fragment>
       <div className="duk-projects__wrapper">
         <h1
-          style={{
+          style={isMobile ? {
+            display: "flex",
+            justifyContent: "center",
+            fontSize: "30px",
+          } : {
             marginLeft: "auto",
             marginRight: "auto",
             marginBottom: "20px",
@@ -87,7 +95,7 @@ export const DukProjects = () => {
                 </ExpandMore>
               </div>
             </div>
-            <div style={{ marginRight: "135px" }}>
+            <div style={isMobile ? {} : { marginRight: "135px" }}>
               <img src={TV}></img>
             </div>
           </div>
@@ -147,7 +155,7 @@ export const DukProjects = () => {
                 </ExpandMore>
               </div>
             </div>
-            <div style={{ marginRight: "140px" }}>
+            <div style={isMobile ? {} : { marginRight: "140px" }}>
               <img src={Aperture}></img>
             </div>
           </div>
@@ -207,7 +215,7 @@ export const DukProjects = () => {
                 </ExpandMore>
               </div>
             </div>
-            <div style={{ marginRight: "65px" }}>
+            <div style={isMobile ? {} : { marginRight: "65px" }}>
               <img src={Camera}></img>
             </div>
           </div>
@@ -267,7 +275,7 @@ export const DukProjects = () => {
                 </ExpandMore>
               </div>
             </div>
-            <div style={{ marginRight: "170px" }}>
+            <div style={isMobile ? {} : { marginRight: "170px" }}>
               <img src={People}></img>
             </div>
           </div>
