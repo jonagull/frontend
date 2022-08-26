@@ -4,6 +4,7 @@ import ScrollIntoView from "react-scroll-into-view";
 import HardwareIcon from "@mui/icons-material/Hardware";
 import HomeRepairServiceIcon from "@mui/icons-material/HomeRepairService";
 import useCheckMobileScreen from "../useCheckMobileScreen";
+import KeyboardDoubleArrowUpIcon from '@mui/icons-material/KeyboardDoubleArrowUp';
 
 export const Navbar = ({ invert }) => {
   let navigate = useNavigate();
@@ -33,19 +34,20 @@ export const Navbar = ({ invert }) => {
         <div
           style={isMobile ? {
             display: "flex",
-            justifyContent: "space-between",
             width: "100%",
             padding: "0",
           } : {
             display: "flex",
-            justifyContent: "space-between",
             width: "100%",
             padding: "0 60px",
           }}
         >
           <h1 style={isMobile ? {
             fontSize: "30px"
-          } : {}}
+          } : {
+            marginRight: "40px",
+            fontSize: "50px"
+          }}
             onClick={() => {
               navigate("/");
             }}
@@ -60,17 +62,27 @@ export const Navbar = ({ invert }) => {
               marginRight: "40px"
             } : {
               display: "flex",
-              justifyContent: "space-around",
               alignItems: "center",
               width: "40%",
+
             }}
           >
+            <ScrollIntoView alignToTop={true} selector="#top">
+              <span style={isMobile ? {
+                marginRight: "10px"
+              } : {
+                marginRight: "15px"
+              }}>
+                <KeyboardDoubleArrowUpIcon />
+                <h2>Om oss</h2>
+              </span>
+            </ScrollIntoView>
             {invert && (
               <ScrollIntoView alignToTop={true} selector="#hr-arbeid">
                 <span style={isMobile ? {
                   marginRight: "10px"
                 } : {
-
+                  marginRight: "15px"
                 }}>
                   <HardwareIcon />
                   <h2>Arbeid</h2>

@@ -52,7 +52,7 @@ export const ShopPage = () => {
   return (
     <React.Fragment>
       <Navbar invert={true} />
-      <div className="shop__wrapper">
+      <div className="shop__wrapper" id="top">
         <DukPage />
         <DukProjects />
         <div className="title__container">
@@ -107,7 +107,7 @@ export const ShopPage = () => {
 
           <div className="category__container">
             <div className="title-button__container">
-              <h2>Mixere</h2>
+              <h2>Mixer/Opptaker</h2>
               <div>
                 <ExpandMore
                   expand={mixerExpanded}

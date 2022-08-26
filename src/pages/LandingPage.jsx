@@ -1,9 +1,12 @@
 import { Button } from "@material-ui/core";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import useCheckMobileScreen from "../useCheckMobileScreen";
 
 export const LandingPage = () => {
   let navigate = useNavigate();
+
+  const isMobile = useCheckMobileScreen();
 
   const [leftToggle, setLeftToggle] = useState(false)
   const [windowToggle, setWindowToggle] = useState(false)
@@ -18,7 +21,7 @@ export const LandingPage = () => {
 
   return (
     <React.Fragment>
-      <div className={windowToggle ? leftToggle ? "container hover-left" : "container hover-right" : "container"} id="container" onMouseEnter={() => toggleWindow()} onMouseLeave={() => toggleWindow()}>
+      {!isMobile && (<div className={windowToggle ? leftToggle ? "container hover-left" : "container hover-right" : "container"} id="container" onMouseEnter={() => toggleWindow()} onMouseLeave={() => toggleWindow()}>
         <div className="split left" onMouseEnter={() => toggleLeft()} onMouseLeave={() => toggleLeft()}>
           <h4>Om Daniel</h4>
           <h4 style={{ position: "absolute", top: "25%" }}>Utvalgte Prosjekter</h4>
@@ -41,7 +44,50 @@ export const LandingPage = () => {
             DUK
           </Button>
         </div>
-      </div>
+      </div>)}
+
+      {isMobile && <div>
+
+        <div className="landing-page__wrapper">
+          <div className="black-side__wrapper">
+            <h1
+              style={{ color: "white", position: "absolute", top: 10, left: 40 }}
+              onClick={() => {
+                navigate("/");
+              }}
+            >
+              DUK
+            </h1>
+            <div className="black-content__container">
+              <h1>Om Daniel</h1>
+              <h1>Utvalgte Prosjekter</h1>
+              <button
+                onClick={() => {
+                  navigate("/portfolio");
+                }}
+              >
+                Daniel
+              </button>
+            </div>
+          </div>
+          <div className="white-side__wrapper">
+            <div className="white-content__container">
+              <h1>Om DUK</h1>
+              <h1>Våre tjenester</h1>
+              <h1>Tidligere Arbeid</h1>
+              <h1>Utleie</h1>
+              <button
+                onClick={() => {
+                  navigate("/shop");
+                }}
+              >
+                DUK
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>}
+
     </React.Fragment >
   );
 };
