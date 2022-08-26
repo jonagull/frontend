@@ -27,6 +27,7 @@ export const MixersPage = () => {
                     backgroundColor: "black",
                     color: "white",
                     marginTop: "10px",
+                    height: "40px"
                   }}
                 >
                   <h4 style={{ fontSize: "15px", fontWeight: "800" }}>Link</h4>

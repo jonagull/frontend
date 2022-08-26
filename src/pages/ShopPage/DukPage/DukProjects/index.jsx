@@ -16,7 +16,6 @@ import People from "../../assets/people.png";
 import TV from "../../assets/tv.png";
 import Camera from "../../assets/tv-camera.jpg";
 import useCheckMobileScreen from "../../../../useCheckMobileScreen";
-import { CenterFocusStrong } from "@mui/icons-material";
 
 export const DukProjects = () => {
   const [dukProjects, setDukProjects] = useState(""); // This is for the adds
@@ -280,44 +279,19 @@ export const DukProjects = () => {
             </div>
           </div>
           <Collapse in={clientsExpanded} timeout="auto" easing>
-            <div>
+            <div className="client-images">
               {dukClients &&
                 dukClients.data.map((x) => (
-                  <div className="duk-project__container">
-                    <div className="duk-content__container">
-                      <h3>{x.attributes.title}</h3>
-                      <MarkDownWrapper markdown={x.attributes.desciption} />
-                      {x.attributes.projectlink && (
-                        <Button
-                          variant="contained"
-                          href={
-                            x.attributes.projectlink && x.attributes.projectlink
-                          }
-                          target="_blank"
-                          style={{
-                            width: "70px",
-                            borderRadius: "50px",
-                            backgroundColor: "black",
-                            marginTop: "10px",
-                            color: "white",
-                          }}
-                        >
-                          <h4 style={{ fontSize: "15px", fontWeight: "800" }}>
-                            Link
-                          </h4>
-                        </Button>
-                      )}
-                    </div>
-                    <div className="duk-image__container">
-                      <img
-                        src={`${apiUrl}${x.attributes.thumbnail.data &&
-                          x.attributes.thumbnail.data[0].attributes.url
-                          }`}
-                      ></img>
-                    </div>
+                  <div className="client-image__container">
+                    <img
+                      src={`${apiUrl}${x.attributes.thumbnail.data &&
+                        x.attributes.thumbnail.data[0].attributes.url
+                        }`}
+                    ></img>
                   </div>
                 ))}
             </div>
+
           </Collapse>
         </div>
       </div>

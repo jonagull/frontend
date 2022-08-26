@@ -27,7 +27,7 @@ export const PortfolioPage = () => {
     <React.Fragment>
       <Navbar invert={false} />
       <div className="project-component__wrapper">
-        <div className="duk-page__wrapper">
+        <div className="duk-page__wrapper" id="top">
           <div className="duk-content__wrapper">
             <div className="header__container">
               <h1>
@@ -55,17 +55,20 @@ export const PortfolioPage = () => {
           </div>
         </div>
 
-        <hr
+
+        {youtubeUrl.data[0].attributes.Link && <hr
           style={{
             width: "90%",
             marginBottom: "40px",
           }}
-        ></hr>
-        <div className="video__container">
+        ></hr>}
+
+        {youtubeUrl.data[0].attributes.Link && (<div className="video__container">
           <iframe
             src={youtubeUrl && youtubeUrl.data[0].attributes.Link}
           ></iframe>
-        </div>
+        </div>)}
+
         <div
           id="hr-prosjekter"
           style={{
@@ -87,8 +90,9 @@ export const PortfolioPage = () => {
           {projectData &&
             projectData.data.map((x, key) => (
               <div
-                style={!isMobile ? {} : { height: "600px", marginBotton: "20px" }}
                 key={key}
+                style={!isMobile ? key % 2 ? { flexDirection: "row-reverse", marginTop: "100px" } : {} : { height: "600px", marginBotton: "20px" }}
+
                 className={
                   key % 2
                     ? "project-right-component__wrapper"

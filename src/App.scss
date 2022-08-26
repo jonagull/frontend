@@ -1,77 +1,15 @@
-* {
-  margin: 0;
-  scroll-behavior: smooth;
+:root {
+  --container-bg-color: #333;
+  --left-bg-color: black;
+  --left-button-hover-color: white;
+  --right-bg-color: white;
+  --right-button-hover-color: black;
+  --hover-width: 75%;
+  --other-width: 25%;
+  --speed: 1000ms;
 }
 
-
-body {
-  margin: 0;
-  padding: 0;
-  font-family: Poppins, sans-serif;
-}
-
-.navbar__bg {
-  color: white;
-  background-color: black;
-}
-
-.navbar-inverted__bg {
-  color: black;
-  background-color: white;
-}
-
-
-
-.navbar__wrapper {
-  width: 100vw;
-  height: 50px;
-  display: flex;
-  position: absolute;
-  justify-content: space-between;
-  align-items: center;
-  position: fixed;
-  top: 0;
-  padding: 10px;
-  padding-left: 30px;
-  z-index: 10;
-  flex-direction: row;
-
-
-
-  span {
-    display: flex;
-    align-items: center;
-
-    svg {
-      height: 40px;
-      width: auto;
-    }
-  }
-
-  h1 {
-    font-size: 40px;
-    cursor: pointer;
-  }
-
-  .menu__container {
-    z-index: 1;
-    margin: 20px 20px 0 0;
-    color: black;
-    font-size: 40px;
-  }
-
-  h1:hover {
-    scale: 1.1;
-    transition: 200ms ease-in-out;
-  }
-
-
-  span:hover {
-    scale: 1.1;
-    transition: 200ms ease-in-out;
-  }
-}
-
+// https://codepen.io/bradtraversy/pen/dJzzdB
 
 .landing-page__wrapper {
   z-index: -1;
@@ -207,6 +145,208 @@ body {
   }
 }
 
+* {
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Poppins, sans-serif;
+}
+
+
+
+h4 {
+  font-size: 4rem;
+  color: #fff;
+  position: absolute;
+  left: 50%;
+  top: 20%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+}
+
+.button {
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  height: 2.5rem;
+  padding-top: 1.3rem;
+  width: 15rem;
+  text-align: center;
+  color: #fff;
+  border: #fff solid 0.2rem;
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  transform: translateX(-50%);
+}
+
+.split.left .button:hover {
+  background-color: var(--left-button-hover-color);
+  border-color: var(--left-button-hover-color);
+}
+
+.split.right .button:hover {
+  background-color: var(--right-button-hover-color);
+  border-color: var(--right-button-hover-color);
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: var(--container-bg-color);
+}
+
+.split {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.split.left {
+  left: 0;
+  background: url('data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxINEhUPEBIVFRUVFRUPFRcVFhUVFRUXFRUWFhcVFRUYHSggGBolHRUVITEhJSkrLi4uFx8zODMsNygtLisBCgoKBQUFDgUFDisZExkrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrK//AABEIAKgBLAMBIgACEQEDEQH/xAAWAAEBAQAAAAAAAAAAAAAAAAAAAQf/xAAcEAEBAQEAAgMAAAAAAAAAAAAAAREhsfBBweH/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/8QAFBEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEQMRAD8Aw0AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABUAAAAAAAVAAAAAAVAAABUAAAVAAABUAAAAAAAAAAAAFBAAAAAAVFQAAAAAFBAAAAAAAAAABUAAAAAABRFAEAFRQEAFABAAVFQBUUBFQFEUEVAFEUAQBQQFQAUEAVFARUAWoAKAILAEUAQUAABBQBFARQARQEUAQUBFKAgoAikBBQBFARQARQEFKCKiggACooIKgKACAAqKgCooCKgCgCAoIoAgoAigIKgKigIqKAioAC0A0AAgCLoAIoAACCgGovyQEUAEUANAEUgAaUAAA0CAIpQNABF0AEUBFpSgAABAEUAEUAABBQBFARQAAAAAAACgAAAEARQAAEUAAARaFAAwCAAU7vvgMAgAAABQA7v59EMAAAAwAp3ffAYBAAKBgAABDAAoAd33wQwAAAAApQoAAEEAUAAQBQABAF4IAoAAgCnAAAAoAAABAAEAXgAAAAgClAH/2Q==') center center no-repeat;
+  background-size: cover;
+  color: white;
+}
+
+.split.left:before {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: var(--left-bg-color);
+}
+
+.split.right {
+  right: 0;
+  color: black;
+  background: url('https://wallpaperaccess.com/full/1586320.jpg') center center no-repeat;
+  background-size: cover;
+}
+
+.split.right:before {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: var(--right-bg-color);
+}
+
+.split.left,
+.split.right,
+.split.right:before,
+.split.left:before {
+  transition: var(--speed) all ease-in-out;
+}
+
+.hover-left .left {
+  width: var(--hover-width);
+}
+
+.hover-left .right {
+  width: var(--other-width);
+}
+
+.hover-left .right:before {
+  z-index: 2;
+}
+
+.hover-right .right {
+  width: var(--hover-width);
+}
+
+.hover-right .left {
+  width: var(--other-width);
+}
+
+.hover-right .left:before {
+  z-index: 2;
+}
+
+@media(max-width: 800px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  .button {
+    width: 12rem;
+  }
+}
+
+@media(max-height: 700px) {
+  .button {
+    top: 70%;
+  }
+}
+
+.navbar__bg {
+  color: white;
+  background-color: black;
+}
+
+.navbar-inverted__bg {
+  color: black;
+  background-color: white;
+}
+
+.navbar__wrapper {
+  width: 100vw;
+  height: 50px;
+  display: flex;
+  position: absolute;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  padding: 10px;
+  padding-left: 30px;
+  z-index: 10;
+  flex-direction: row;
+
+  span {
+    display: flex;
+    align-items: center;
+
+    svg {
+      height: 40px;
+      width: auto;
+    }
+  }
+
+  h1 {
+    font-size: 40px;
+    cursor: pointer;
+  }
+
+  .menu__container {
+    z-index: 1;
+    margin: 20px 20px 0 0;
+    color: black;
+    font-size: 40px;
+  }
+
+  h1:hover {
+    scale: 1.1;
+    transition: 200ms ease-in-out;
+  }
+
+  span:hover {
+    scale: 1.1;
+    transition: 200ms ease-in-out;
+  }
+}
+
+.right-content__wrapper {
+  height: 100vh;
+}
+
+
 .project-component__wrapper {
   width: 100vw;
   display: flex;
@@ -257,10 +397,7 @@ body {
         margin-top: 40px;
       }
     }
-
   }
-
-
 
 
   .description__wrapper {
@@ -300,7 +437,8 @@ body {
 
 
   .chosen-projects {
-    margin-left: 40px;
+    margin-left: 60px;
+    padding-left: 30px;
 
 
     @media screen and (max-width: 900px) {
@@ -334,6 +472,8 @@ body {
 
     .content__container {
 
+      padding: 20px;
+
       h1 {
         font-family: Poppins;
         font-size: 30px;
@@ -347,9 +487,8 @@ body {
       p {
         font-family: "Poppins";
         font-style: normal;
-        font-weight: 400;
-        font-size: 14px;
-        line-height: 15px;
+        font-size: 18px;
+        line-height: 18px;
         letter-spacing: -0.045em;
         white-space: "pre-wrap";
       }
@@ -613,9 +752,6 @@ body {
 
 }
 
-.pink-text {
-  color: hotpink;
-}
 
 .mixers__wrapper {
   width: 100vw;
@@ -810,5 +946,12 @@ body {
 
   }
 
+  .client-images {
+    display: flex;
+    flex-wrap: wrap;
 
+    .client-image__container {
+      margin: 10px;
+    }
+  }
 }
