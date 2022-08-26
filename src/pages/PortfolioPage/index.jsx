@@ -56,14 +56,14 @@ export const PortfolioPage = () => {
         </div>
 
 
-        {youtubeUrl.data[0].attributes.Link && <hr
+        {youtubeUrl && <hr
           style={{
             width: "90%",
             marginBottom: "40px",
           }}
         ></hr>}
 
-        {youtubeUrl.data[0].attributes.Link && (<div className="video__container">
+        {youtubeUrl && (<div className="video__container">
           <iframe
             src={youtubeUrl && youtubeUrl.data[0].attributes.Link}
           ></iframe>
