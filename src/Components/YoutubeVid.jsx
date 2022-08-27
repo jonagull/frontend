@@ -5,14 +5,10 @@ export function YoutubeVid() {
     const [youtubeUrl, setYoutubeUrl] = useState();
     useGetYoutubeUrl(setYoutubeUrl);
 
-    console.log(youtubeUrl == undefined || null)
-
-    if (youtubeUrl == undefined || null) {
+    if (youtubeUrl.data[0].Link == undefined || youtubeUrl.data[0].Link == null) {
         return (
             <div>
-                <h1>
-                    LOL
-                </h1>
+
             </div>
 
         )
