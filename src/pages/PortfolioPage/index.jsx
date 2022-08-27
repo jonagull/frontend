@@ -9,19 +9,16 @@ import { Navbar } from "../../Components/Navbar";
 import EmailModal from "../../Components/EmailForm";
 import { MarkDownWrapper } from "../../Components/MarkDownWrapper";
 import useCheckMobileScreen from "../../useCheckMobileScreen";
+import { YoutubeVid } from "../../Components/YoutubeVid";
 
 export const PortfolioPage = () => {
   const [projectData, setProjectData] = useState();
   const [portfolioContentData, setPortfolioContentData] = useState();
-  const [youtubeUrl, setYoutubeUrl] = useState();
 
   const isMobile = useCheckMobileScreen();
 
   useGetProjects(setProjectData);
   useGetPortfolioContent(setPortfolioContentData);
-  useGetYoutubeUrl(setYoutubeUrl);
-
-  console.log(isMobile)
 
   return (
     <React.Fragment>
@@ -55,19 +52,7 @@ export const PortfolioPage = () => {
           </div>
         </div>
 
-
-        {youtubeUrl && <hr
-          style={{
-            width: "90%",
-            marginBottom: "40px",
-          }}
-        ></hr>}
-
-        {youtubeUrl && (<div className="video__container">
-          <iframe
-            src={youtubeUrl && youtubeUrl.data[0].attributes.Link}
-          ></iframe>
-        </div>)}
+        <YoutubeVid />
 
         <div
           id="hr-prosjekter"
