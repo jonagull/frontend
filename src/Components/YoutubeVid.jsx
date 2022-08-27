@@ -5,7 +5,7 @@ export function YoutubeVid() {
     const [youtubeUrl, setYoutubeUrl] = useState();
     useGetYoutubeUrl(setYoutubeUrl);
 
-    if (youtubeUrl.data[0].Link == undefined || youtubeUrl.data[0].Link == null) {
+    if (youtubeUrl && (youtubeUrl.data[0].Link == undefined || youtubeUrl.data[0].Link == null)) {
         return (
             <div>
 
