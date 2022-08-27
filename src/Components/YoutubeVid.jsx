@@ -7,7 +7,7 @@ export function YoutubeVid() {
 
     console.log(youtubeUrl == undefined || null)
 
-    if (youtubeUrl != undefined || null) {
+    if (youtubeUrl == undefined || null) {
         return (
             <div>
                 <h1>
@@ -17,19 +17,22 @@ export function YoutubeVid() {
 
         )
     } else {
-        <>
-            <hr
-                style={{
-                    width: "90%",
-                    marginBottom: "40px",
-                }}
-            ></hr>
-            <div className="video__container">
-                <iframe
-                    src={youtubeUrl && youtubeUrl.data[0].attributes.Link}
-                ></iframe>
-            </div>
-        </>
+        return (
+            <>
+                <hr
+                    style={{
+                        width: "90%",
+                        marginBottom: "40px",
+                    }}
+                ></hr>
+                <div className="video__container">
+                    <iframe
+                        src={youtubeUrl && youtubeUrl.data[0].attributes.Link}
+                    ></iframe>
+                </div>
+            </>
+        )
+
     }
 
 
