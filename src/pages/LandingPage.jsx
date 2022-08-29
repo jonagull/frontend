@@ -32,8 +32,9 @@ export const LandingPage = () => {
         </div>
 
         <div className="split right">
-          <h4 style={{ color: "black" }}>Våre tjenester</h4>
-          <h4 style={{ color: "black", position: "absolute", top: "25%" }}>Tidligere Arbeid</h4>
+          <h4 style={{ color: "black", position: "absolute", top: "15%" }}>Audio</h4>
+          <h4 style={{ color: "black", position: "absolute", top: "20%" }}>Film</h4>
+          <h4 style={{ color: "black", position: "absolute", top: "24.5%" }}>Tidligere Arbeid</h4>
           <h4 style={{ color: "black", position: "absolute", top: "30%" }}>Utleie</h4>
           <Button className="button"
             style={{ backgroundColor: "black", color: "white", borderRadius: "8px", fontWeight: "700", fontFamily: "poppins", fontSize: "20px" }}
