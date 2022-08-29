@@ -8,3 +8,12 @@ export const chevronButtonStyle = {
   width: "70px",
   boxShadow: boxShader.boxShadow,
 };
+
+export const LinkButtonStyle = {
+  width: "70px",
+  borderRadius: "50px",
+  backgroundColor: "black",
+  marginTop: "10px",
+  color: "white",
+  height: "40px",
+};

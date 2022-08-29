@@ -1,6 +1,7 @@
 import { Button } from "@material-ui/core";
 import React, { useState } from "react";
 import { apiUrl } from "../../../../constants/baseApiUrl";
+import { LinkButtonStyle } from "../../../../constants/theme";
 import { useGetMisc } from "./useGetMisc";
 
 export const MiscPage = () => {
@@ -21,13 +22,7 @@ export const MiscPage = () => {
                   variant="contained"
                   href={x.attributes.hygglo_link && x.attributes.hygglo_link}
                   target="_blank"
-                  style={{
-                    width: "70px",
-                    borderRadius: "50px",
-                    backgroundColor: "black",
-                    color: "white",
-                    marginTop: "10px",
-                  }}
+                  style={LinkButtonStyle}
                 >
                   <h4 style={{ fontSize: "15px", fontWeight: "800" }}>Link</h4>
                 </Button>

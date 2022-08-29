@@ -9,7 +9,10 @@ import IconButton from "@mui/material/IconButton";
 import { styled } from "@material-ui/core";
 import Collapse from "@material-ui/core/Collapse";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import { chevronButtonStyle } from "../../../../constants/theme";
+import {
+  chevronButtonStyle,
+  LinkButtonStyle,
+} from "../../../../constants/theme";
 import { Button } from "@mui/material";
 import Aperture from "../../assets/aperture.png";
 import People from "../../assets/people.png";
@@ -63,17 +66,21 @@ export const DukProjects = () => {
     <React.Fragment>
       <div className="duk-projects__wrapper">
         <h1
-          style={isMobile ? {
-            display: "flex",
-            justifyContent: "center",
-            fontSize: "30px",
-          } : {
-            marginLeft: "auto",
-            marginRight: "auto",
-            marginBottom: "20px",
-            fontSize: "80px",
-            fontWeight: 700,
-          }}
+          style={
+            isMobile
+              ? {
+                  display: "flex",
+                  justifyContent: "center",
+                  fontSize: "30px",
+                }
+              : {
+                  marginLeft: "auto",
+                  marginRight: "auto",
+                  marginBottom: "20px",
+                  fontSize: "80px",
+                  fontWeight: 700,
+                }
+          }
         >
           Tidligere arbeid
         </h1>
@@ -113,13 +120,7 @@ export const DukProjects = () => {
                             x.attributes.projectlink && x.attributes.projectlink
                           }
                           target="_blank"
-                          style={{
-                            width: "70px",
-                            borderRadius: "50px",
-                            backgroundColor: "black",
-                            marginTop: "10px",
-                            color: "white",
-                          }}
+                          style={LinkButtonStyle}
                         >
                           <h4 style={{ fontSize: "15px", fontWeight: "800" }}>
                             Link
@@ -129,9 +130,10 @@ export const DukProjects = () => {
                     </div>
                     <div className="duk-image__container">
                       <img
-                        src={`${apiUrl}${x.attributes.thumbnail.data &&
+                        src={`${apiUrl}${
+                          x.attributes.thumbnail.data &&
                           x.attributes.thumbnail.data.attributes.url
-                          }`}
+                        }`}
                       ></img>
                     </div>
                   </div>
@@ -173,13 +175,7 @@ export const DukProjects = () => {
                             x.attributes.projectlink && x.attributes.projectlink
                           }
                           target="_blank"
-                          style={{
-                            width: "70px",
-                            borderRadius: "50px",
-                            backgroundColor: "black",
-                            marginTop: "10px",
-                            color: "white",
-                          }}
+                          style={LinkButtonStyle}
                         >
                           <h4 style={{ fontSize: "15px", fontWeight: "800" }}>
                             Link
@@ -189,9 +185,10 @@ export const DukProjects = () => {
                     </div>
                     <div className="duk-image__container">
                       <img
-                        src={`${apiUrl}${x.attributes.thumbnail.data &&
+                        src={`${apiUrl}${
+                          x.attributes.thumbnail.data &&
                           x.attributes.thumbnail.data[0].attributes.url
-                          }`}
+                        }`}
                       ></img>
                     </div>
                   </div>
@@ -233,13 +230,7 @@ export const DukProjects = () => {
                             x.attributes.projectlink && x.attributes.projectlink
                           }
                           target="_blank"
-                          style={{
-                            width: "70px",
-                            borderRadius: "50px",
-                            backgroundColor: "black",
-                            marginTop: "10px",
-                            color: "white",
-                          }}
+                          style={LinkButtonStyle}
                         >
                           <h4 style={{ fontSize: "15px", fontWeight: "800" }}>
                             Link
@@ -249,9 +240,10 @@ export const DukProjects = () => {
                     </div>
                     <div className="duk-image__container">
                       <img
-                        src={`${apiUrl}${x.attributes.thumbnail.data &&
+                        src={`${apiUrl}${
+                          x.attributes.thumbnail.data &&
                           x.attributes.thumbnail.data[0].attributes.url
-                          }`}
+                        }`}
                       ></img>
                     </div>
                   </div>
@@ -284,14 +276,14 @@ export const DukProjects = () => {
                 dukClients.data.map((x) => (
                   <div className="client-image__container">
                     <img
-                      src={`${apiUrl}${x.attributes.thumbnail.data &&
+                      src={`${apiUrl}${
+                        x.attributes.thumbnail.data &&
                         x.attributes.thumbnail.data[0].attributes.url
-                        }`}
+                      }`}
                     ></img>
                   </div>
                 ))}
             </div>
-
           </Collapse>
         </div>
       </div>
