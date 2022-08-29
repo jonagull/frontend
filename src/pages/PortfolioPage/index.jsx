@@ -70,7 +70,7 @@ export const PortfolioPage = () => {
             }}
           />
         </div>
-        <div style={{ display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center" }}>
+        <div style={{ display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", }}>
           <h1 className="chosen-projects">Utvalgte Prosjekter:</h1>
           {projectData &&
             projectData.data.map((x, key) => (
