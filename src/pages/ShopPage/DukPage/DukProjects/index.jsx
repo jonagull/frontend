@@ -69,17 +69,17 @@ export const DukProjects = () => {
           style={
             isMobile
               ? {
-                  display: "flex",
-                  justifyContent: "center",
-                  fontSize: "30px",
-                }
+                display: "flex",
+                justifyContent: "center",
+                fontSize: "30px",
+              }
               : {
-                  marginLeft: "auto",
-                  marginRight: "auto",
-                  marginBottom: "20px",
-                  fontSize: "80px",
-                  fontWeight: 700,
-                }
+                marginLeft: "auto",
+                marginRight: "auto",
+                marginBottom: "20px",
+                fontSize: "80px",
+                fontWeight: 700,
+              }
           }
         >
           Tidligere arbeid
@@ -130,10 +130,9 @@ export const DukProjects = () => {
                     </div>
                     <div className="duk-image__container">
                       <img
-                        src={`${apiUrl}${
-                          x.attributes.thumbnail.data &&
+                        src={`${apiUrl}${x.attributes.thumbnail.data &&
                           x.attributes.thumbnail.data.attributes.url
-                        }`}
+                          }`}
                       ></img>
                     </div>
                   </div>
@@ -185,10 +184,9 @@ export const DukProjects = () => {
                     </div>
                     <div className="duk-image__container">
                       <img
-                        src={`${apiUrl}${
-                          x.attributes.thumbnail.data &&
+                        src={`${apiUrl}${x.attributes.thumbnail.data &&
                           x.attributes.thumbnail.data[0].attributes.url
-                        }`}
+                          }`}
                       ></img>
                     </div>
                   </div>
@@ -240,10 +238,9 @@ export const DukProjects = () => {
                     </div>
                     <div className="duk-image__container">
                       <img
-                        src={`${apiUrl}${
-                          x.attributes.thumbnail.data &&
+                        src={`${apiUrl}${x.attributes.thumbnail.data &&
                           x.attributes.thumbnail.data[0].attributes.url
-                        }`}
+                          }`}
                       ></img>
                     </div>
                   </div>
@@ -253,7 +250,7 @@ export const DukProjects = () => {
 
           <div className="category__container">
             <div className="title-button__container">
-              <h2>Kunder</h2>
+              <h2>Tidligere Oppdragsgivere</h2>
               <div>
                 <ExpandMore
                   expand={clientsExpanded}
@@ -276,10 +273,9 @@ export const DukProjects = () => {
                 dukClients.data.map((x) => (
                   <div className="client-image__container">
                     <img
-                      src={`${apiUrl}${
-                        x.attributes.thumbnail.data &&
+                      src={`${apiUrl}${x.attributes.thumbnail.data &&
                         x.attributes.thumbnail.data[0].attributes.url
-                      }`}
+                        }`}
                     ></img>
                   </div>
                 ))}
