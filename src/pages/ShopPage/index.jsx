@@ -26,7 +26,6 @@ const ExpandMore = styled((props) => {
 }));
 
 export const ShopPage = () => {
-
   const [categoryThumbnail, setCategoryThumbnail] = useState("");
 
   const [micExpanded, setMicExpanded] = useState(false);
@@ -90,18 +89,16 @@ export const ShopPage = () => {
             </div>
             <div>
               <img
-                src={`${apiUrl}${categoryThumbnail &&
+                alt="thumbnail"
+                src={`${apiUrl}${
+                  categoryThumbnail &&
                   categoryThumbnail.data[0].attributes.microphone.data
                     .attributes.url
-                  }`}
+                }`}
               ></img>
             </div>
           </div>
-          <Collapse
-            in={micExpanded}
-            timeout="auto"
-            easing
-          >
+          <Collapse in={micExpanded} timeout="auto" easing>
             <MicsPage />
           </Collapse>
 
@@ -122,9 +119,11 @@ export const ShopPage = () => {
             </div>
             <div>
               <img
-                src={`${apiUrl}${categoryThumbnail &&
+                alt="thumbnail"
+                src={`${apiUrl}${
+                  categoryThumbnail &&
                   categoryThumbnail.data[0].attributes.mixer.data.attributes.url
-                  }`}
+                }`}
               ></img>
             </div>
           </div>
@@ -149,10 +148,12 @@ export const ShopPage = () => {
             </div>
             <div>
               <img
-                src={`${apiUrl}${categoryThumbnail &&
+                alt="thumbnail"
+                src={`${apiUrl}${
+                  categoryThumbnail &&
                   categoryThumbnail.data[0].attributes.wireless.data.attributes
                     .url
-                  }`}
+                }`}
               ></img>
             </div>
           </div>
@@ -177,9 +178,11 @@ export const ShopPage = () => {
             </div>
             <div>
               <img
-                src={`${apiUrl}${categoryThumbnail &&
+                alt="thumbnail"
+                src={`${apiUrl}${
+                  categoryThumbnail &&
                   categoryThumbnail.data[0].attributes.extra.data.attributes.url
-                  }`}
+                }`}
               ></img>
             </div>
           </div>

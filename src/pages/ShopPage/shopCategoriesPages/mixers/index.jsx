@@ -29,6 +29,7 @@ export const MixersPage = () => {
               </div>
               <div className="product-image__container">
                 <img
+                  alt="thumbnail"
                   src={
                     x.attributes.thumbnail.data
                       ? `${apiUrl}${x.attributes.thumbnail.data.attributes.url}`

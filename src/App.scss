@@ -898,13 +898,9 @@ h4 {
   margin-right: auto;
   margin-top: 70px;
 
-
-
   @media screen and (max-width: 900px) {
     width: 100%;
   }
-
-
 
   .duk-project__container {
     display: flex;
@@ -915,8 +911,6 @@ h4 {
     border-radius: 30px;
     box-shadow: 4px 8px 36px -13px rgba(0, 0, 0, 0.75);
     width: 80vw;
-
-
 
     @media screen and (max-width: 900px) {
       flex-direction: column-reverse;
