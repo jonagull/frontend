@@ -5,8 +5,6 @@ export function YoutubeVid() {
   const [youtubeUrl, setYoutubeUrl] = useState();
   useGetYoutubeUrl(setYoutubeUrl);
 
-  console.log(youtubeUrl);
-
   if (youtubeUrl === undefined || youtubeUrl.data[0].attributes.Link === "") {
     return <div style={{ color: "white" }}></div>;
   } else {
