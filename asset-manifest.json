@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/static/css/main.e36954a5.css",
-    "main.js": "/static/js/main.1208989d.js",
+    "main.css": "/static/css/main.7dd6b6ed.css",
+    "main.js": "/static/js/main.8d56e399.js",
     "static/js/787.cda612ba.chunk.js": "/static/js/787.cda612ba.chunk.js",
     "static/media/aperture.png": "/static/media/aperture.e293ef8ac0e01d5f5cdd.png",
     "static/media/tv-camera.jpg": "/static/media/tv-camera.ff3f7d6ff9062c685460.jpg",
     "static/media/tv.png": "/static/media/tv.3b9b90b2bc26d4ca0a6c.png",
     "index.html": "/index.html",
-    "main.e36954a5.css.map": "/static/css/main.e36954a5.css.map",
-    "main.1208989d.js.map": "/static/js/main.1208989d.js.map",
+    "main.7dd6b6ed.css.map": "/static/css/main.7dd6b6ed.css.map",
+    "main.8d56e399.js.map": "/static/js/main.8d56e399.js.map",
     "787.cda612ba.chunk.js.map": "/static/js/787.cda612ba.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e36954a5.css",
-    "static/js/main.1208989d.js"
+    "static/css/main.7dd6b6ed.css",
+    "static/js/main.8d56e399.js"
   ]
 }
