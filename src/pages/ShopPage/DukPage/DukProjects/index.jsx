@@ -102,7 +102,7 @@ export const DukProjects = () => {
               </div>
             </div>
             <div style={isMobile ? {} : { marginRight: "135px" }}>
-              <img src={TV}></img>
+              <img  alt="Tv" src={TV}></img>
             </div>
           </div>
           <Collapse in={adsExpanded} timeout="auto" easing>
@@ -129,7 +129,7 @@ export const DukProjects = () => {
                       )}
                     </div>
                     <div className="duk-image__container">
-                      <img
+                      <img alt="thumbnail"
                         src={`${apiUrl}${x.attributes.thumbnail.data &&
                           x.attributes.thumbnail.data.attributes.url
                           }`}
@@ -156,7 +156,7 @@ export const DukProjects = () => {
               </div>
             </div>
             <div style={isMobile ? {} : { marginRight: "140px" }}>
-              <img src={Aperture}></img>
+              <img alt="Aperture" src={Aperture}></img>
             </div>
           </div>
           <Collapse in={filmExpanded} timeout="auto" easing>
@@ -183,7 +183,7 @@ export const DukProjects = () => {
                       )}
                     </div>
                     <div className="duk-image__container">
-                      <img
+                      <img alt="thumbnail"
                         src={`${apiUrl}${x.attributes.thumbnail.data &&
                           x.attributes.thumbnail.data[0].attributes.url
                           }`}
@@ -210,7 +210,7 @@ export const DukProjects = () => {
               </div>
             </div>
             <div style={isMobile ? {} : { marginRight: "65px" }}>
-              <img src={Camera}></img>
+              <img alt="Camera" src={Camera}></img>
             </div>
           </div>
           <Collapse in={tvExpanded} timeout="auto" easing>
@@ -237,7 +237,7 @@ export const DukProjects = () => {
                       )}
                     </div>
                     <div className="duk-image__container">
-                      <img
+                      <img alt="thumbnail"
                         src={`${apiUrl}${x.attributes.thumbnail.data &&
                           x.attributes.thumbnail.data[0].attributes.url
                           }`}
@@ -264,7 +264,7 @@ export const DukProjects = () => {
               </div>
             </div>
             <div style={isMobile ? {} : { marginRight: "170px" }}>
-              <img src={People}></img>
+              <img  alt="people" src={People}></img>
             </div>
           </div>
           <Collapse in={clientsExpanded} timeout="auto" easing>
@@ -272,7 +272,7 @@ export const DukProjects = () => {
               {dukClients &&
                 dukClients.data.map((x) => (
                   <div className="client-image__container">
-                    <img
+                    <img alt="thumbnail"
                       src={`${apiUrl}${x.attributes.thumbnail.data &&
                         x.attributes.thumbnail.data[0].attributes.url
                         }`}
